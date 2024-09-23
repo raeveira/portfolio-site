@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: #101010;
+	--on-background: #f2f2f2;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: #333;
+	background-color: #fff;
+	min-height: 100%;
+	margin: 0;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+@layer base {
+	:root {
+		--radius: 0.5rem;
+	}
+}

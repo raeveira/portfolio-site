@@ -25,3 +25,23 @@ body {
 		--radius: 0.5rem;
 	}
 }
+
+.NeueMontreal {
+	font-family: 'Neue Montreal', sans-serif;
+}
+
+.transform-style-preserve-3d {
+    transform-style: preserve-3d;
+}
+
+.hero-text {
+	text-shadow: 0 5px 10px #0057ff26, 0 -5px 10px #ff5a001a, 0 -5px 25px #ffffff4d;
+}
+
+.text-hero-1920 {
+	text-shadow: 0 5px 20px #0057ff33, 0 -5px 15px #ff5a0026, 0 0 30px #ffffff4d;
+}
+
+.hero-fade {
+	background-image: linear-gradient(to bottom, #10101000, var(--background) 60%);
+}

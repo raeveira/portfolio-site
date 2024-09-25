@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Inter } from 'next/font/google';
 import Navigation from '@/components/Navigation';
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   style: 'normal',
@@ -22,6 +23,7 @@ export default function RootLayout({
       <body className={inter.className + ' bg-background text-onBackground flex-col items-center'}>
         <Navigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

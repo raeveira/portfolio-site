@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Shine() {
     return (
         <motion.div
-            className='transform-style-preserve-3d rotate-[15deg] gap-6 opacity-15 blur-md h-[200%] pb-0 pr-0 flex absolute inset-[0%] min-[1920px]:gap-x-12 min-[1440px]:gap-x-10'
+            className='transform-style-preserve-3d rotate-[15deg] gap-6 opacity-15 blur-md h-[200%] pb-0 pr-0 flex absolute inset-[0%] min-[1920px]:gap-x-12 min-[1440px]:gap-x-10 max-[991px]:hidden'
             initial={{ opacity: 0, x: '-25vw' }}
             animate={{ opacity: [0.15, 0.15, 0, 0], x: ['-25vw', '80vw', '80vw', '-25vw'] }}
             transition={{

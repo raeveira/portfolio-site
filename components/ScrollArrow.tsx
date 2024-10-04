@@ -8,20 +8,21 @@ export default function ScrollArrow() {
     <motion.div
       className="flex justify-center items-center"
       animate={{
-        y: [0, 24, 0], // TranslateY from 0px to 24px and back to 0px
-        opacity: [1, 0.4, 1], // Opacity fades when it moves up
+        y: [0, 24, 0],
+        opacity: [0.4, 1, 0.4],
       }}
       transition={{
-        duration: 1.5, // Duration of one complete animation cycle
+        duration: 2.5,
         ease: 'easeInOut',
-        repeat: Infinity, // Loop the animation infinitely
+        repeat: Infinity,
       }}
     >
       <Image
-        src={'https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/63e206eedd964a5c5db19c91_23-icon-arrow-down.svg'}
+        src={'/icons/arrow-down.svg'}
         alt="scroll down arrow icon"
         width={40}
         height={40}
+        className='opacity-50 block min-[1920px]:w-[48px] min-[1440px]:h-[48px] min-[1440px]:w-[48px] max-[479px]:z-[1] max-[479px]:opacity-100 max-[479px]:w-[24px] max-[479px]:h-auto max-[479px]:relative max-[479px]:-ml-[2px]'
       />
     </motion.div>
   );

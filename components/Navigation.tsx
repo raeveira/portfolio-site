@@ -43,7 +43,7 @@ export default function NavigationBar() {
 							width={50}
 							height={50}
 						/>
-						<div className='flex flex-col justify-center mt-[1px] space-y-2'>
+						<div className='flex flex-col justify-center mt-[1px] space-y-2 max-479px:hidden'>
 							<h1 className='text-xl font-medium leading-5 text-white'>Rae</h1>
 							<p className='text-[#f2f2f280] text-xs leading-3'>
 								Software Developer

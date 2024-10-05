@@ -49,10 +49,10 @@ const config: Config = {
 				projectThumbnail:'0 40px 50px 10px #00000040',
 			},
 			transitionTimingFunction: {
-				'custom-ease': 'cubic-bezier(.165, .84, .44, 1)', // Your custom easing
+				'custom-ease': 'cubic-bezier(.165, .84, .44, 1)',
 			},
 			transitionDuration: {
-				'400': '400ms', // Custom duration for the transition
+				'400': '400ms',
 			},
 			backgroundImage: {
 				'hero-radial':

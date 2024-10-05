@@ -31,7 +31,6 @@ export default function ProjectCard() {
                         <div
                             className={'tracking-normal text-projectcard-title justify-between NeueMontreal text-[24px] font-medium leading-[100%] flex 1920px:text-[32px]'}>{data.title}
                         </div>
-                        {/* eslint-disable-next-line jsx-a11y/alt-text */}
                         <img src={'/icons/arrow-right.svg'} alt={'arrow pointing right'}
                                className={`max-w-full inline-block border-0 1920px:h-12 transition-transform duration-300 ${isHovered ? 'translate-x-2' : ''}`}/>
                     </div>
@@ -41,7 +40,6 @@ export default function ProjectCard() {
                         — {data.description}
                     </div>
                 </div>
-                {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 <img src={data.image} alt={'project thumbnail'}
                        className={`z-[1] self-center max-w-[90%] relative shadow-projectThumbnail max-767px:max-w-full transition-transform duration-300 ${isHovered ? '-translate-y-[24px]' : ''}`}></img>
                 <div

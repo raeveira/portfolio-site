@@ -31,17 +31,33 @@ body {
 }
 
 .transform-style-preserve-3d {
-    transform-style: preserve-3d;
+	transform-style: preserve-3d;
 }
 
 .hero-text {
-	text-shadow: 0 5px 10px #0057ff26, 0 -5px 10px #ff5a001a, 0 -5px 25px #ffffff4d;
+	text-shadow: 0 5px 10px #0057ff26, 0 -5px 10px #ff5a001a,
+		0 -5px 25px #ffffff4d;
 }
 
-.text-hero-1920 {
-	text-shadow: 0 5px 20px #0057ff33, 0 -5px 15px #ff5a0026, 0 0 30px #ffffff4d;
+@media screen and (max-width: 1920px) {
+	.hero-text-1920 {
+		text-shadow: 0 5px 20px #0057ff33, 0 -5px 15px #ff5a0026, 0 0 30px #ffffff4d;
+	}
+}
+@media screen and (max-width: 479px) {
+	.text-hero-479 {
+		text-shadow: 0 5px 15px #0057ff40, 0 -5px 15px #ff5a0033, 0 0 30px #fff6;
+	}
 }
 
 .hero-fade {
-	background-image: linear-gradient(to bottom, #10101000, var(--background) 60%);
+	background-image: linear-gradient(
+		to bottom,
+		#10101000,
+		var(--background) 60%
+	);
+}
+
+.text-projectcard-title {
+	text-shadow: 0 -2px 10px #fff3;
 }

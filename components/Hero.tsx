@@ -28,15 +28,15 @@ export default function Hero() {
                         <div className='z-[5] gap-x-8 gap-y-0 bg-[#101010b3] flex-col justify-around items-stretch pt-[80px] px-[56px] pb-[192px] flex relative 1920px:backdrop-filter-none 1920px:flex-col 1920px:pt-[120px] 1920px:px-[88px] 1920px:pb-[280px] 1440px:gap-y-16 1440px:gap-x-0 1440px:pt-24 1440px:px-[72px] 1440px:pb-[200px] max-991px:gap-y-8 max-991px:pt-[8vw] max-991px:px-[5vw] max-991px:pb-[26vw] max-767px:pb-[28vw]'>
                             <div className='z-[1] gap-16 flex-col flex relative 1920px:gap-y-24 max-991px:gap-y-[7vw]'>
                                 <div className='text-left -tracking-[2px] hero-text NeueMontreal text-[80px] font-medium leading-[90%] 1920px:-tracking-[3px] 1920px:text-[132px] hero-text-1920  1440px:-tracking-[2.2px] 1440px:text-8xl max-991px:text-[8.2vw] ]'>
-                                    I craft products, interactions &amp; <span className="bg-gradient-to-b from-[var(--on-background)] from-50% to-transparent text-transparent bg-clip-text pr-3 tracking-[-2px] font-gloock italic 1920px:-tracking-[3px] max-991px:-tracking-[1.5px] ">stories.</span>
+                                    I craft wonders, adventures &amp; <span className="bg-gradient-to-b from-[var(--on-background)] from-50% to-transparent text-transparent bg-clip-text pr-3 tracking-[-2px] font-gloock italic 1920px:-tracking-[3px] max-991px:-tracking-[1.5px] ">tales.</span>
                                 </div>
                                 <div className='grid grid-cols-2 gap-x-6 auto-rows-auto 1920px:gap-x-[88px] 1440px:gap-x-10 max-991px:gap-x-[2vw]'>
                                     <div />
                                     <div className='col-span-1 row-span-1'>
                                         <div className='flex-col NeueMontreal text-[20px] font-medium leading-[140%] flex 1920px:text-[32px] min-[1440]:text-2xl max-991px:text-[2.2vw]'>
-                                            Designer at Discord. Based in Toronto.
+                                            Student at Gilde. Based in Roermond.
                                             <br />
-                                            <span className='NeueMontreal text-[20px] font-normal leading-[1.4] text-[#f2f2f280] max-991px:text-[2.2vw]'>Formerly at Google and RBC</span>
+                                            <span className='NeueMontreal text-[20px] font-normal leading-[1.4] text-[#f2f2f280] max-991px:text-[2.2vw]'>Passionate about language side quests!</span>
                                         </div>
                                     </div>
                                 </div>

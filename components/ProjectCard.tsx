@@ -15,7 +15,7 @@ export default function ProjectCard() {
     }
 
     return (
-        <section
+        <div
             className={'outline -outline-offset-1 bg-[#f2f2f20a] rounded-3xl outline-1 outline-[#f2f2f20d] self-stretch p-2 relative shadow-projectCardOutline 1920px:rounded-[36px] 1920px:p-3'}>
             <div
                 className={'z-[1] bg-gradient-to-r from-[#0000] from-5% via-[#fffc] via-35% via-[#fff] via-50% via-[#fffc] via-65% to-[#0000] to-95%'}/>
@@ -31,6 +31,7 @@ export default function ProjectCard() {
                         <div
                             className={'tracking-normal text-projectcard-title justify-between NeueMontreal text-[24px] font-medium leading-[100%] flex 1920px:text-[32px]'}>{data.title}
                         </div>
+                        {/* eslint-disable-next-line jsx-a11y/alt-text */}
                         <img src={'/icons/arrow-right.svg'} alt={'arrow pointing right'}
                                className={`max-w-full inline-block border-0 1920px:h-12 transition-transform duration-300 ${isHovered ? 'translate-x-2' : ''}`}/>
                     </div>
@@ -40,11 +41,12 @@ export default function ProjectCard() {
                         — {data.description}
                     </div>
                 </div>
+                {/* eslint-disable-next-line jsx-a11y/alt-text */}
                 <img src={data.image} alt={'project thumbnail'}
                        className={`z-[1] self-center max-w-[90%] relative shadow-projectThumbnail max-767px:max-w-full transition-transform duration-300 ${isHovered ? '-translate-y-[24px]' : ''}`}></img>
                 <div
                     className={`z-0 opacity-0 absolute inset-[0%] bg-projectCardColour max-767px:opacity-100 max-767px:bg-projectCardColour767 transition-opacity duration-300 ${isHovered ? '!opacity-100' : ''}`}/>
             </Link>
-        </section>
+        </div>
     )
 }

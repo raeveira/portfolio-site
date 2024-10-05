@@ -101,8 +101,8 @@ export default function NavigationBar() {
 								>
 									<span className='text-sm font-medium tracking-[.2px]'>LinkedIn</span>
 									<Image
-										src='icon-external.svg'
-										alt='LinkedIn Icon'
+										src='/icons/icon-external.svg'
+										alt='Arrow pointing up and right'
 										width={18}
 										height={18}
 									/>
@@ -115,8 +115,8 @@ export default function NavigationBar() {
 								>
 									<span className='text-sm font-medium tracking-[.2px]'>Resume</span>
 									<Image
-										src='icon-external.svg'
-										alt='Resume Icon'
+										src='/icons/icon-external.svg'
+										alt='Arrow pointing up and right'
 										width={18}
 										height={18}
 									/>

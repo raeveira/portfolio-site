@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero';
 import HeroPortrait from '@/components/HeroPortrait';
-import ProjectCard from "@/components/ProjectCard";
+import ProjectSection from "@/components/ProjectSection";
 
 
 export default function Home() {
@@ -8,7 +8,7 @@ export default function Home() {
     <main className="min-h-dvh">
       <Hero />
       <HeroPortrait />
-      <ProjectCard />
+      <ProjectSection />
     </main>
   );
 }

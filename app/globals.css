@@ -26,6 +26,56 @@ body {
 	}
 }
 
+/* Importing the NeueMontreal fonts */
+@font-face {
+	font-family: 'Neue Montreal';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../public/fonts/NeueMontreal-Book.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	font-weight: 500;
+	font-style: normal;
+	src: url('../public/fonts/NeueMontreal-Medium.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	font-weight: 600;
+	font-style: normal;
+	src: url('../public/fonts/NeueMontreal-SemiBoldItalic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../public/fonts/NeueMontreal-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	font-weight: 400;
+	font-style: italic;
+	src: url('../public/fonts/NeueMontreal-Italic.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Neue Montreal';
+	font-weight: 200;
+	font-style: normal;
+	src: url('../public/fonts/NeueMontreal-Thin.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Gloock';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../public/fonts/Gloock-Regular.ttf') format('truetype');
+}
+
 .NeueMontreal {
 	font-family: 'Neue Montreal', sans-serif;
 }

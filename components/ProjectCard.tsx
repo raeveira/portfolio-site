@@ -9,19 +9,12 @@ type projectData = {
     description: string,
     image: string,
     link: string,
+    color_from: string,
+    color_to: string
 }
 
-export default function ProjectCard() {
+export default function ProjectCard(data: projectData) {
     const [isHovered, setIsHovered] = React.useState(false);
-
-    const data: projectData = {
-        title: 'Test Hub Next',
-        company: 'Google',
-        year: '22',
-        description: 'Envisioning a future of playtesting for all developers.',
-        image: '/images/peakpx.jpg',
-        link: '/projects/testhubnext',
-    }
 
     return (
         <div
@@ -41,7 +34,7 @@ export default function ProjectCard() {
                             className={'tracking-normal text-projectcard-title justify-between NeueMontreal text-[24px] font-medium leading-[100%] flex 1920px:text-[32px]'}>{data.title}
                         </div>
                         <img src={'/icons/arrow-right.svg'} alt={'arrow pointing right'}
-                               className={`max-w-full inline-block border-0 1920px:h-12 transition-transform duration-300 ${isHovered ? '1920px:translate-x-2' : ''}`}/>
+                             className={`max-w-full inline-block border-0 1920px:h-12 transition-transform duration-300 ${isHovered ? '1920px:translate-x-2' : ''}`}/>
                     </div>
                     <div
                         className={'text-[#f2f2f280] tracking-[.2px] self-stretch pr-8 NeueMontreal text-[14px] font-normal leading-5 max-479px:text-[15px] max-479px:leading-[19px] 1440px:text-[16px] 1920px:text-[18px] 1920px:leading-[26px]'}>
@@ -50,9 +43,13 @@ export default function ProjectCard() {
                     </div>
                 </div>
                 <img src={data.image} alt={'project thumbnail'}
-                       className={`z-[1] self-center max-w-[90%] relative shadow-projectThumbnail max-767px:max-w-full transition-transform duration-300 ${isHovered ? '1920px:-translate-y-[22px]' : ''} rounded-2xl rounded-b-none`}></img>
+                     className={`z-[1] self-center max-w-[90%] relative shadow-projectThumbnail max-767px:max-w-full transition-transform duration-300 ${isHovered ? '1920px:-translate-y-[22px]' : ''} rounded-xl rounded-b-none`}></img>
                 <div
-                    className={`z-0 opacity-0 absolute inset-[0%] bg-projectCardColour max-767px:opacity-100 max-767px:bg-projectCardColour767 transition-opacity duration-300 ${isHovered ? '1920px:!opacity-100' : ''}`}/>
+                    className={`z-0 opacity-0 absolute inset-[0%] max-767px:opacity-100 max-767px:bg-projectCardColour767 transition-opacity duration-300 ${isHovered ? '1920px:!opacity-100' : ''}`}
+                    style={{
+                        backgroundImage: `radial-gradient(circle at 50% 0, ${data.color_from}, ${data.color_to})`
+                    }}
+                />
             </Link>
         </div>
     )

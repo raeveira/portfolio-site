@@ -132,8 +132,8 @@ export default function NavigationBar() {
 									<Image
 										src={
 											isMenuOpen
-												? 'icon-close.svg'
-												: 'icon-@.svg'
+												? '/icons/icon-close.svg'
+												: '/icons/icon-@.svg'
 										}
 										alt={isMenuOpen ? 'Close Icon' : 'Menu Icon'}
 										width={24}
@@ -157,7 +157,7 @@ export default function NavigationBar() {
 											>
 												LinkedIn
 												<Image
-													src='icon-external.svg'
+													src='/icons/icon-external.svg'
 													alt='External Link'
 													width={16}
 													height={16}
@@ -171,7 +171,7 @@ export default function NavigationBar() {
 											>
 												Resume
 												<Image
-													src='icon-external.svg'
+													src='/icons/icon-external.svg'
 													alt='External Link'
 													width={16}
 													height={16}

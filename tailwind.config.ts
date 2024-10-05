@@ -45,6 +45,14 @@ const config: Config = {
 					'inset 0 0 10px #0000004d, 0 0 60px #0000004d, 0 60px 180px #000',
 				'window-main-1920': 'inset 0 0 15px #0000001a, 0 0 20px #0000004d',
 				'dot-section': '0 0 20px #fff',
+				projectCardOutline: '0 40px 80px #00000080',
+				projectThumbnail:'0 40px 50px 10px #00000040',
+			},
+			transitionTimingFunction: {
+				'custom-ease': 'cubic-bezier(.165, .84, .44, 1)',
+			},
+			transitionDuration: {
+				'400': '400ms',
 			},
 			backgroundImage: {
 				'hero-radial':
@@ -55,6 +63,11 @@ const config: Config = {
 					'radial-gradient(circle farthest-side at 50% 0, #f2f2f240, #0000 80%)',
 				'hero-gradient':
 					'linear-gradient(to right, rgba(0, 0, 0, 0) 5%, #fffc 35%, #fff 50%, #fffc 65%, rgba(0, 0, 0, 0) 95%)',
+				'window-grain':
+					'url("https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/644af0299bc01254815ae442_noise-overlay-2.png")',
+				'project-outline-gradient': 'linear-gradient(190deg, #252525, var(--background))',
+				projectCardColour767: 'radial-gradient(circle at 50% 0, #fff3, #0000)',
+				projectCardColour: 'radial-gradient(circle at 50% 0, #ffffff4d, #0000)'
 			},
 			backgroundSize: {
 				'200px': '200px',

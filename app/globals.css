@@ -57,3 +57,8 @@ body {
 		var(--background) 60%
 	);
 }
+
+.text-projectcard-title {
+	text-shadow: 0 -2px 10px #fff3;
+}
+

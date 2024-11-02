@@ -14,6 +14,7 @@ const config: Config = {
 			screens: {
 				'1920px': '1920px',
 				'1440px': '1440px',
+				'1280px': '1280px',
 				'991px': '991px',
 				'767px': '767px',
 				'479px': '479px',
@@ -30,9 +31,10 @@ const config: Config = {
 			inset: {
 				'0/0/auto': '0% 0% auto',
 				'auto/0/0': 'auto 0% 0%',
+				'0/auto/0/0': '0% auto 0% 0%',
 			},
 			boxShadow: {
-				nav: '0 2px 25px 2px #ffffff',
+				'nav': '0 2px 25px 2px #ffffff',
 				'custom-dark': '0 10px 25px rgba(0, 0, 0, 0.15)',
 				'hero-shadow':
 					'inset 0 0 8px rgba(0, 0, 0, 0.6), 0 0 60px rgba(0, 0, 0, 0.3), 0 30px 120px rgba(0, 0, 0, 0.8)',
@@ -66,11 +68,12 @@ const config: Config = {
 				'window-grain':
 					'url("https://cdn.prod.website-files.com/63dcb6e1a80e9454b630f4c4/644af0299bc01254815ae442_noise-overlay-2.png")',
 				'project-outline-gradient': 'linear-gradient(190deg, #252525, var(--background))',
-				projectCardColour767: 'radial-gradient(circle at 50% 0, #fff3, #0000)',
-				projectCardColour: 'radial-gradient(circle at 50% 0, #ffffff4d, #0000)'
+				'projectCardColour767': 'radial-gradient(circle at 50% 0, #fff3, #0000)',
+				'projectCardColour': 'radial-gradient(circle at 50% 0, #ffffff4d, #0000)'
 			},
 			backgroundSize: {
 				'200px': '200px',
+				'240px': '240px',
 			},
 			backgroundPosition: {
 				'0_0': '0 0',
@@ -83,4 +86,5 @@ const config: Config = {
 	},
 	plugins: [tailwindcss_animate],
 };
+
 export default config;

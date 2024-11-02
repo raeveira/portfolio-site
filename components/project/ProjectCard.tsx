@@ -20,7 +20,7 @@ export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: number }
         <div
             className={'outline -outline-offset-1 bg-[#f2f2f20a] rounded-3xl outline-1 outline-[#f2f2f20d] self-stretch p-2 relative shadow-projectCardOutline 1920px:rounded-[36px] 1920px:p-3'}>
             <div
-                className={'z-[1] bg-gradient-to-r from-[#0000] from-5% via-[#fffc] via-35% via-[#fff] via-50% via-[#fffc] via-65% to-[#0000] to-95%'}/>
+                className={'z-[1] bg-[linear-gradient(to_right,rgba(0,0,0,0)_5%,rgba(255,252,255,1)_35%,rgba(255,255,255,1)_50%,rgba(255,252,255,1)_65%,rgba(0,0,0,0)_95%)]'}/>
             <Link href={projectItems?.link || ''}
                   className={'bg-[#0000] max-w-full overflow-hidden h-[500px] gap-y-14 pt-8 px-5 relative flex transition-[border] duration-400 ease-custom-ease no-underline flex-col rounded-2xl border border-solid border-[#3d3d3d] text-onBackground bg-project-outline-gradient hover:border-[#888] hover:outline-0 max-991px:h-auto max-767px:hover:border-[#3d3d3d] max-479px:gap-y-12 max-479px:pt-[26px] max-479px:px-6 1440px:gap-y-16 1440px:h-[696px] 1440px:pt-9 1440px:px-8 1920px:gap-y-[88px] 1920px:rounded-[24px] 1920px:h-[960px] 1920px:pt-[44px] 1920px:px-[44px]'}
                   onMouseEnter={() => setIsHovered(true)}

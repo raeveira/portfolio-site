@@ -26,47 +26,55 @@ body {
 	}
 }
 
+.activeLinkClass {
+	opacity: 1 !important;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-weight: 500;
+    transition: all .5s cubic-bezier(.23, 1, .32, 1);
+}
+
 /* Importing the NeueMontreal fonts */
 @font-face {
 	font-family: 'Neue Montreal';
 	font-weight: 400;
 	font-style: normal;
-	src: url('../public/fonts/NeueMontreal-Book.otf') format('opentype');
+	src: url('../public/fonts/NeueMontreal/NeueMontreal-Book.otf') format('opentype');
 }
 
 @font-face {
 	font-family: 'Neue Montreal';
 	font-weight: 500;
 	font-style: normal;
-	src: url('../public/fonts/NeueMontreal-Medium.otf') format('opentype');
+	src: url('../public/fonts/NeueMontreal/NeueMontreal-Medium.otf') format('opentype');
 }
 
 @font-face {
 	font-family: 'Neue Montreal';
 	font-weight: 600;
 	font-style: normal;
-	src: url('../public/fonts/NeueMontreal-SemiBolditalic.otf') format('opentype');
+	src: url('../public/fonts/NeueMontreal/NeueMontreal-SemiBolditalic.otf') format('opentype');
 }
 
 @font-face {
 	font-family: 'Neue Montreal';
 	font-weight: 700;
 	font-style: normal;
-	src: url('../public/fonts/NeueMontreal-Bold.otf') format('opentype');
+	src: url('../public/fonts/NeueMontreal/NeueMontreal-Bold.otf') format('opentype');
 }
 
 @font-face {
 	font-family: 'Neue Montreal';
 	font-weight: 400;
 	font-style: italic;
-	src: url('../public/fonts/NeueMontreal-Italic.otf') format('opentype');
+	src: url('../public/fonts/NeueMontreal/NeueMontreal-Italic.otf') format('opentype');
 }
 
 @font-face {
 	font-family: 'Neue Montreal';
 	font-weight: 200;
 	font-style: normal;
-	src: url('../public/fonts/NeueMontreal-Thin.otf') format('opentype');
+	src: url('../public/fonts/NeueMontreal/NeueMontreal-Thin.otf') format('opentype');
 }
 
 @font-face {
@@ -76,8 +84,126 @@ body {
 	src: url('../public/fonts/Gloock-Regular.ttf') format('truetype');
 }
 
+/* Import the JetBrainsMono fonts */
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 700;
+	font-style: normal;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-Bold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 700;
+	font-style: Italic;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-BoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 800;
+	font-style: normal;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 800;
+	font-style: italic;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 200;
+	font-style: normal;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-ExtraLight.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 200;
+	font-style: italic;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-ExtraLightItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 400;
+	font-style: italic;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-Italic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 300;
+	font-style: normal;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-Light.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 300;
+	font-style: italic;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-LightItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 500;
+	font-style: normal;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-Medium.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 500;
+	font-style: italic;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-MediumItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 400;
+	font-style: normal;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 600;
+	font-style: normal;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 600;
+	font-style: italic;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-SemiBoldItalic.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 100;
+	font-style: normal;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-Thin.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'JetBrains Mono';
+	font-weight: 100;
+	font-style: italic;
+	src: url('../public/fonts/JetBrainsMono/JetBrainsMono-ThinItalic.woff2') format('woff2');
+}
+
+
 .NeueMontreal {
 	font-family: 'Neue Montreal', sans-serif;
+}
+
+.JetBrainsMono {
+	font-family: 'JetBrains Mono', sans-serif;
 }
 
 .transform-style-preserve-3d {
@@ -100,6 +226,10 @@ body {
 	}
 }
 
+.projectRoleShadow {
+	text-shadow: 0 0 10px #f2f2f266;
+}
+
 .hero-fade {
 	background-image: linear-gradient(
 		to bottom,
@@ -110,5 +240,9 @@ body {
 
 .text-projectcard-title {
 	text-shadow: 0 -2px 10px #fff3;
+}
+
+.projectBannerShadow {
+	text-shadow: 0 5px 15px #0057ff33, 0 -5px 15px #ff5a0026, 0 -5px 25px #ffffff40;
 }
 

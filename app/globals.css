@@ -215,6 +215,10 @@ body {
 		0 -5px 25px #ffffff4d;
 }
 
+.highlighted-text {
+	text-shadow: 0 0 10px #f2f2f266;
+}
+
 @media screen and (max-width: 1920px) {
 	.hero-text-1920 {
 		text-shadow: 0 5px 20px #0057ff33, 0 -5px 15px #ff5a0026, 0 0 30px #ffffff4d;

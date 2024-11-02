@@ -28,6 +28,11 @@ const Items: ItemIdentifier[] = [
                 id: 'highlights',
                 text: 'Highlights',
                 offsetTop: 0
+            },
+            {
+                id: 'context',
+                text: 'Context',
+                offsetTop: 0
             }
         ],
         content: {
@@ -48,6 +53,32 @@ const Items: ItemIdentifier[] = [
             hightlightReel: {
                 calloutText: 'An end-to-end setup experience for configuring Apache with PHP and a MariaDB database across various Linux distributions to ensure seamless functionality for my project.',
                 moneyshots: [
+                    {
+                        caption: 'Ansible project image',
+                        alt: 'Ansible project image',
+                        src: '/images/ansible-thumbnail.png',
+                        type: HighlightType.IMAGE,
+                    }
+                ]
+            },
+            context: {
+                heading: 'Wrapping up strong with Ansible for Linux deployment.',
+                subheading: 'The automation and acceleration of Linux system installations',
+                description: [
+                    {
+                        text: 'The Ansible project was a great opportunity to learn about the automation and acceleration of Linux system installations. It was a great experience to work with the team and learn from each other.',
+                        highlight: false
+                    },
+                    {
+                        text: 'The project was a great success and I am proud of the work that we have done. I am looking forward to working on more projects like this in the future.',
+                        highlight: true
+                    },
+                    {
+                        text: 'I am excited to see what the future holds for Ansible and how it can be used to improve the efficiency of Linux system installations.',
+                        highlight: false
+                    }
+                ],
+                images: [
                     {
                         caption: 'Ansible project image',
                         alt: 'Ansible project image',

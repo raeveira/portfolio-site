@@ -26,7 +26,12 @@ type ItemIdentifier = {
             calloutText: string;
             moneyshots: HighlightImages[];
         }
-
+        context: {
+            heading: string;
+            subheading: string;
+            description: { text: string; highlight: boolean; }[];
+            images: HighlightImages[];
+        }
     }
 }
 

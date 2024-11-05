@@ -1,5 +1,5 @@
 import ItemIdentifier from "@/types/ItemIdentifier";
-import { HighlightType } from "@/types/HighlightImages";
+import {HighlightType} from "@/types/HighlightImages";
 
 const Items: ItemIdentifier[] = [
     {
@@ -32,6 +32,11 @@ const Items: ItemIdentifier[] = [
             {
                 id: 'context',
                 text: 'Context',
+                offsetTop: 0
+            },
+            {
+                id: 'problem',
+                text: 'Problem',
                 offsetTop: 0
             }
         ],
@@ -77,6 +82,62 @@ const Items: ItemIdentifier[] = [
                         text: 'I am excited to see what the future holds for Ansible and how it can be used to improve the efficiency of Linux system installations.',
                         highlight: false
                     }
+                ],
+                images: [
+                    {
+                        caption: 'Ansible project image',
+                        alt: 'Ansible project image',
+                        src: '/images/ansible-thumbnail.png',
+                        type: HighlightType.IMAGE,
+                    }
+                ]
+            },
+            problem: {
+                heading: 'This wasn\'t just going to be a typical linux installation.',
+                subheading: 'An Ansible Learning Curve',
+                challenge: 'Automate the setup and configuration of a Linux server using Ansible.',
+                solutionMethod: 'DevOps Development Methodologies: ',
+                solutionDescription: [
+                    {
+                        heading: 'Plan',
+                        icons: '/icons/green-stars-badge.svg',
+                        description: 'Outline the server requirements and automation goals',
+                    },
+                    {
+                        heading: 'Code',
+                        icons: '/icons/green-rewind-badge.svg',
+                        description: 'Write playbooks and scripts to define server configurations.',
+                    },
+                    {
+                        heading: 'Build',
+                        icons: '/icons/green-rewind-badge.svg',
+                        description: 'Deploy the server and apply configurations using Ansible.',
+                    },
+                    {
+                        heading: 'Test',
+                        icons: '/icons/green-emoji-badge.svg',
+                        description: 'Verify that the server is configured correctly and meets requirements.',
+                    }
+                ],
+                description: [
+                    {
+                        text: "Working with Ansible brought in an unexpected layer of complexity.",
+                        highlight: false
+                    },
+                    {
+                        text: "The main challenge required my primary focus, but I needed to quickly learn and schedule time for Ansible to support my goals.",
+                        highlight: true
+                    },
+                    {
+                        text: "Balancing these tasks required careful planning to prevent Ansible from disrupting the core objectives.",
+                        highlight: false
+                    }
+                ],
+                points: [
+                    {highlightedText: "An aggressive two-month deadline, " ,text: "as we had to complete the setup before the primary project deadline.", icon: "/icons/yellow-clock.svg"},
+                    {highlightedText: "Balancing Ansible learning " ,text: "and scheduling without impacting the main challenge required careful planning.", icon: "/icons/yellow-key.svg"},
+                    {highlightedText: "Ansible's configuration needs added complexity, ", text: "creating a side challenge in the project timeline.", icon: "/icons/yellow-neutral-emoji.svg"},
+                    {highlightedText: "The main focus remained on the primary challenge, ", text: "making this a secondary but necessary effort.", icon: "/icons/yellow-html-css.svg"}
                 ],
                 images: [
                     {

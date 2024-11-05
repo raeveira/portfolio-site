@@ -31,6 +31,16 @@ type ItemIdentifier = {
             subheading: string;
             description: { text: string; highlight: boolean; }[];
             images: HighlightImages[];
+        },
+        problem: {
+            heading: string;
+            subheading: string;
+            challenge: string;
+            solutionMethod: string;
+            solutionDescription: {icons: string, heading: string, description: string}[];
+            description: { text: string; highlight: boolean; }[];
+            points: { highlightedText: string; text: string; icon: string; }[];
+            images: HighlightImages[];
         }
     }
 }

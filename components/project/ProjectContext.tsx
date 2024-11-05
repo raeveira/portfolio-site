@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from "react";
 import Items from "@/data/projectItems";
 import ItemIdentifier from "@/types/ItemIdentifier";
-import {HighlightType} from "@/types/HighlightImages";
-import Image from "next/image";
 import MarkDot from "@/components/MarkDot";
 import Description from "@/components/project/Description";
 import DynamicImages from "@/components/project/DynamicImages";

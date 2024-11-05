@@ -2,7 +2,6 @@ import React, {useEffect, useState} from "react";
 import Items from "@/data/projectItems";
 import ItemIdentifier from "@/types/ItemIdentifier";
 import Image from "next/image";
-import {HighlightType} from "@/types/HighlightImages";
 import DynamicImages from "@/components/project/DynamicImages";
 
 export default function ProjectHighlights({ItemIdentifier}: { ItemIdentifier: number }) {

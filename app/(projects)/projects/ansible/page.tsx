@@ -6,6 +6,7 @@ import ProjectOverview from "@/components/project/ProjectOverview";
 import ProjectHighlights from "@/components/project/ProjectHighlights";
 import ProjectDivider from "@/components/project/ProjectDivider";
 import ProjectContext from "@/components/project/ProjectContext";
+import ProjectProblem from "@/components/project/ProjectProblem";
 
 export default function AnsibleProjectPage() {
     return (
@@ -18,6 +19,7 @@ export default function AnsibleProjectPage() {
                 <ProjectDivider/>
                 <ProjectContext ItemIdentifier={1}/>
                 <ProjectDivider/>
+                <ProjectProblem ItemIdentifier={1}/>
             </main>
         </>
     );

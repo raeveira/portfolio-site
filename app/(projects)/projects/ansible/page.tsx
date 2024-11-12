@@ -7,6 +7,7 @@ import ProjectHighlights from "@/components/project/ProjectHighlights";
 import ProjectDivider from "@/components/project/ProjectDivider";
 import ProjectContext from "@/components/project/ProjectContext";
 import ProjectProblem from "@/components/project/ProjectProblem";
+import ProjectUpdateFlow from "@/components/project/ProjectUpdateFlow";
 
 export default function AnsibleProjectPage() {
     return (
@@ -20,6 +21,8 @@ export default function AnsibleProjectPage() {
                 <ProjectContext ItemIdentifier={1}/>
                 <ProjectDivider/>
                 <ProjectProblem ItemIdentifier={1}/>
+                <ProjectDivider/>
+                <ProjectUpdateFlow ItemIdentifier={1}/>
             </main>
         </>
     );

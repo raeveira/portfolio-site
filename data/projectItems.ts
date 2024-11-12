@@ -38,6 +38,11 @@ const Items: ItemIdentifier[] = [
                 id: 'problem',
                 text: 'Problem',
                 offsetTop: 0
+            },
+            {
+                id: 'updateFlow',
+                text: 'Update Flow',
+                offsetTop: 0
             }
         ],
         content: {

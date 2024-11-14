@@ -18,28 +18,20 @@ export default function ProjectStructure({ItemIdentifier}: { ItemIdentifier: num
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
-            let sectionVisible = false;
-
             entries.forEach(entry => {
+                console.log(`Entry: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`);
                 if (entry.isIntersecting) {
-                    sectionVisible = true;
                     setActiveId(entry.target.id);
                 }
             });
-
-            if (!sectionVisible && window.scrollY === 0) {
-                setActiveId(null);
-            }
         }, {
             rootMargin: '0px',
-            threshold: 0.5
+            threshold: 0.1
         });
 
-        const sections = sidebarItems.map(item => document.getElementById(item.id)).filter(Boolean);
+        const sections = sidebarItems.map(item => document.getElementById(item.id)).filter((section): section is HTMLElement => section !== null);
         sections.forEach(section => {
-            if (section) {
-                observer.observe(section);
-            }
+            observer.observe(section);
         });
 
         // Cleanup function to unobserve sections

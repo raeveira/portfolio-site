@@ -32,7 +32,7 @@ export default function ProjectSectionBanner({ItemIdentifier}: { ItemIdentifier:
                         animate={{translateY: 0, opacity: 1}}
                         transition={{duration: 0.8, ease: 'easeOut'}}
                     >
-                        <Image src={projectItems?.image || ''} alt={projectItems?.text || ''} height={882} width={758}
+                        <Image src={projectItems?.image || ''} alt={projectItems?.text || ''} height={1225} width={1440}
                                className={'inline-block max-w-full h-auto align-middle max-479px:max-w-full'}></Image>
                     </motion.div>
                 </div>

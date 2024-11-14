@@ -8,21 +8,27 @@ import ProjectDivider from "@/components/project/ProjectDivider";
 import ProjectContext from "@/components/project/ProjectContext";
 import ProjectProblem from "@/components/project/ProjectProblem";
 import ProjectUpdateFlow from "@/components/project/ProjectUpdateFlow";
+import ProjectLayoutPatterns from "@/components/project/ProjectLayoutPatterns";
 
 export default function AnsibleProjectPage() {
+    const ItemIdentifier = 1;
+
     return (
         <>
-            <ProjectStructure ItemIdentifier={1}/>
-            <ProjectSectionBanner ItemIdentifier={1}/>
+            <ProjectStructure ItemIdentifier={ItemIdentifier}/>
+            <ProjectSectionBanner ItemIdentifier={ItemIdentifier}/>
             <main className="min-h-dvh">
-                <ProjectOverview ItemIdentifier={1}/>
-                <ProjectHighlights ItemIdentifier={1}/>
+                <ProjectOverview ItemIdentifier={ItemIdentifier}/>
+                <ProjectHighlights ItemIdentifier={ItemIdentifier}/>
                 <ProjectDivider/>
-                <ProjectContext ItemIdentifier={1}/>
+                <ProjectContext ItemIdentifier={ItemIdentifier}/>
                 <ProjectDivider/>
-                <ProjectProblem ItemIdentifier={1}/>
+                <ProjectProblem ItemIdentifier={ItemIdentifier}/>
                 <ProjectDivider/>
-                <ProjectUpdateFlow ItemIdentifier={1}/>
+                <ProjectUpdateFlow ItemIdentifier={ItemIdentifier}/>
+                <ProjectDivider/>
+                <ProjectLayoutPatterns ItemIdentifier={ItemIdentifier}/>
+                <ProjectDivider/>
             </main>
         </>
     );

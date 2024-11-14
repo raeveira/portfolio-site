@@ -16,7 +16,7 @@ export default function ProjectContext({ItemIdentifier}: { ItemIdentifier: numbe
     }, [ItemIdentifier]);
 
     return (
-        <section id={'context'}
+        <section id="context"
                  className={'flex py-[120px] items-center justify-start flex-col bg-none 1920px:py-[160px] max-991px:px-[24px] max-767px:px-[24px] max-479px:py-[64px] max-479px:px-[16px] max-479px:bg-none'}>
             <div
                 className={'flex w-[882px] flex-col gap-y-[96px] 1920px:w-[1440px] 1920px:gap-y-[144px] 1440px:w-[1044px] 1440px:gap-y-[120px] max-991px:w-full max-479px:gap-y-[80px]'}>
@@ -49,7 +49,7 @@ export default function ProjectContext({ItemIdentifier}: { ItemIdentifier: numbe
                             </div>
                         </div>
                     </div>
-                    <DynamicImages images={projectItems?.content.context.images} number={'1'} />
+                    <DynamicImages images={projectItems?.content.context.images} number={'1'} points={undefined} additionalPoints={undefined} />
                 </div>
             </div>
         </section>

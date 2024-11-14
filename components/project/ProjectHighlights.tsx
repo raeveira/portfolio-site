@@ -32,13 +32,13 @@ export default function ProjectHighlights({ItemIdentifier}: { ItemIdentifier: nu
                     </div>
                     <div
                         className={'leading-[140%] font-medium text-[24px] NeueMontreal tracking-[.2px] text-center 1440px:text-[20px] 1920px:text-[40px] max-767px:leading-[130%] max-479px:text-[18px] max-479px:text-center'}>
-                        {projectItems?.content.hightlightReel.calloutText}<br/>
+                        {projectItems?.content.highlightReel.calloutText}<br/>
                     </div>
                 </div>
                 {/* Project Highlights image */}
                 <div
                     className={'flex self-stretch flex-col gap-y-[32px] 1920px:gap-y-[56px] max-767px:gap-y-[24px]'}>
-                    <DynamicImages images={projectItems?.content.hightlightReel.moneyshots} number={'0'} />
+                    <DynamicImages images={projectItems?.content.highlightReel.moneyshots} number={'0'} points={undefined} additionalPoints={undefined} />
                 </div>
                 <div
                     className={'-mb-[1px] h-[1px] inset-0/0/auto absolute bg-gradient-to-r from-15% from-[#0000] via-50% via-[#64d2ff80] to-95% to-[#0000]'}/>

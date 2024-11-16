@@ -3,7 +3,9 @@ import highlightImages, {HighlightType} from "@/types/HighlightImages";
 import {PointsItem} from "@/types/ItemIdentifier";
 import HighlightedBody from "@/components/HighlightedBody";
 import Image from "next/image";
-import React from "react";
+import React, {useState} from "react";
+import {Label} from "@/components/ui/label";
+import {Switch} from "@/components/ui/switch";
 
 export default function DynamicImages({images, number, points, additionalPoints}: {
     images: highlightImages[] | undefined,
@@ -12,6 +14,7 @@ export default function DynamicImages({images, number, points, additionalPoints}
     additionalPoints: PointsItem[] | undefined
 }) {
     const isSingleImage = images && images.length === 1;
+    const [isInteractive, setIsInteractive] = useState(false);
 
     return (
         <div
@@ -33,19 +36,70 @@ export default function DynamicImages({images, number, points, additionalPoints}
                                 <div className={'rounded-2 max-479px:rounded-[12px]'}>
                                     <div className={'relative p-[62.5%_0_0_0]'}>
                                         <video src={image.src} className={'absolute top-0 left-0 w-full h-full'}
-                                               autoPlay={image.type === HighlightType.VIDEO} muted loop={image.type === HighlightType.LOOPVIDEO}></video>
+                                               autoPlay={image.type === HighlightType.VIDEO} muted
+                                               loop={image.type === HighlightType.LOOPVIDEO}></video>
                                     </div>
                                 </div>
                             </div>
+                        ) : image.type === HighlightType.INTERACTIVE ? (
+                            <>
+
+                                <div className={'w-full mb-[12px] 1920px:mb-[16px]'}>
+                                    <div className={'flex items-center justify-end'}>
+                                        <div
+                                            className={'flex items-center justify-end p-[10px] pl-[20px] self-end flex-row rounded-[100px] bg-[#f2f2f20d] gap-x-[12px] 1920px:gap-x-[12px] 1920px:p-[16px] 1920px:pl-[28px] max-767px:p-[8px] max-767px:pl-[24px]'}>
+                                            <Label htmlFor="interactiveMode" className={'leading-[100%] font-medium text-[16px] NeueMontreal tracking-[.2px] 1920px:text-[18px] max-767px:text-[15px]'}>Interactive</Label>
+                                            <Switch id="interactiveMode"
+                                                    onClick={() => setIsInteractive(!isInteractive)}/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="relative w-full">
+                                    <Image
+                                        src={image.src}
+                                        alt={image.alt}
+                                        width={0}
+                                        height={0}
+                                        loading="lazy"
+                                        sizes="(max-width: 767px) 83vw, (max-width: 991px) 84vw, (max-width: 1439px) 834px, (max-width: 1919px) 996px, 1376px"
+                                        className={`
+                                          inline-block max-w-full align-middle w-full 
+                                          rounded-4 border border-[#252525] z-[1] 
+                                          1920px:rounded-[16px] 1440px:rounded-[14px] max-479px:rounded-[12px] 
+                                          transition-opacity duration-300 ease-in-out
+                                        `}
+                                    />
+                                    {image.interactiveSrc && (
+                                        <Image
+                                            src={image.interactiveSrc}
+                                            alt={image.interactiveAlt || ''}
+                                            width={0}
+                                            height={0}
+                                            loading="lazy"
+                                            sizes="(max-width: 767px) 83vw, (max-width: 991px) 84vw, (max-width: 1439px) 834px, (max-width: 1919px) 996px, 1376px"
+                                            className={`
+                                                absolute top-0 left-0 
+                                                inline-block max-w-full align-middle w-full 
+                                                rounded-4 border border-[#252525] z-[2] 
+                                                1920px:rounded-[16px] 1440px:rounded-[14px] max-479px:rounded-[12px] 
+                                                transition-opacity duration-300 ease-in-out
+                                                ${isInteractive ? 'opacity-100' : 'opacity-0'}
+                                            `}
+                                        />
+                                    )}
+                                </div>
+                            </>
                         ) : null}
                         <div className={'flex items-center justify-end space-x-2 px-4 max-479px:px-3'}>
-                            <div className={'flex text-xs NeueMontreal tracking-widest text-[#f2f2f240] space-x-1 1920px:text-base 1440px:text-sm'}>
+                            <div
+                                className={'flex text-xs NeueMontreal tracking-widest text-[#f2f2f240] space-x-1 1920px:text-base 1440px:text-sm'}>
                                 <span className={'font-medium text-[#f2f2f266]'}>
                                     {image.number ? image.number : `${number}.${index}`}
                                 </span>
                                 {image.caption}
                             </div>
-                            <div className={'flex items-center justify-center rounded-full bg-[#f2f2f20d] py-1 px-3 1920px:px-4 max-479px:py-[4px]'}>
+                            <div
+                                className={'flex items-center justify-center rounded-full bg-[#f2f2f20d] py-1 px-3 1920px:px-4 max-479px:py-[4px]'}>
                                 <div className={'text-xs JetBrainsMono opacity-40 1920px:text-sm max-479px:text-[9px]'}>
                                     {image.type}
                                 </div>

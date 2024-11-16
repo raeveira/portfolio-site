@@ -479,8 +479,10 @@ const Items: ItemIdentifier[] = [
                             {
                                 caption: 'Ansible project image',
                                 alt: 'Ansible project image',
+                                interactiveAlt: 'Ansible project image',
                                 src: '/images/ansible-thumbnail.png',
-                                type: HighlightType.IMAGE,
+                                interactiveSrc: '/images/ansible-thumbnail-interactive.png',
+                                type: HighlightType.INTERACTIVE,
                                 number: '4.0'
                             }
                         ]
@@ -609,8 +611,10 @@ const Items: ItemIdentifier[] = [
                             {
                                 caption: 'Ansible project image',
                                 alt: 'Ansible project image',
+                                interactiveAlt: 'Ansible project image',
                                 src: '/images/ansible-thumbnail.png',
-                                type: HighlightType.IMAGE,
+                                interactiveSrc: '/images/ansible-thumbnail-interactive.png',
+                                type: HighlightType.INTERACTIVE,
                                 number: '4.3'
                             }
                         ]

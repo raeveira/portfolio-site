@@ -7,7 +7,9 @@ export enum HighlightType {
 
 type HighlightImages = {
     src: string;
+    interactiveSrc?: string;
     alt: string;
+    interactiveAlt?: string;
     caption: string;
     type: HighlightType;
     number?: string;

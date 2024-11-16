@@ -11,6 +11,7 @@ type HighlightImages = {
     alt: string;
     interactiveAlt?: string;
     caption: string;
+    interactText?: string;
     type: HighlightType;
     number?: string;
 }

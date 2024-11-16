@@ -482,6 +482,7 @@ const Items: ItemIdentifier[] = [
                                 interactiveAlt: 'Ansible project image',
                                 src: '/images/ansible-thumbnail.png',
                                 interactiveSrc: '/images/ansible-thumbnail-interactive.png',
+                                interactText: 'Interactive Mode',
                                 type: HighlightType.INTERACTIVE,
                                 number: '4.0'
                             }
@@ -614,6 +615,7 @@ const Items: ItemIdentifier[] = [
                                 interactiveAlt: 'Ansible project image',
                                 src: '/images/ansible-thumbnail.png',
                                 interactiveSrc: '/images/ansible-thumbnail-interactive.png',
+                                interactText: 'process flow',
                                 type: HighlightType.INTERACTIVE,
                                 number: '4.3'
                             }

@@ -25,6 +25,8 @@ type InformationItem = {
     image?: HighlightImages[];
     points?: PointsItem[];
     additionalPoints?: PointsItem[];
+    additionalPoints1?: PointsItem[];
+    additionalPoints2?: PointsItem[];
     discovery?: string;
 };
 
@@ -65,6 +67,10 @@ type Content = {
         heading: string;
         information: InformationItem[];
     };
+    interactions: {
+        heading: string;
+        information: InformationItem[];
+    }
 };
 
 type ItemIdentifier = {

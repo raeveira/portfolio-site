@@ -48,6 +48,11 @@ const Items: ItemIdentifier[] = [
                 id: 'layoutPatterns',
                 text: 'Layout Patterns',
                 offsetTop: 0
+            },
+            {
+                id: 'interactions',
+                text: 'Interactions',
+                offsetTop: 0
             }
         ],
         content: {
@@ -620,6 +625,246 @@ const Items: ItemIdentifier[] = [
                                 number: '4.3'
                             }
                         ]
+                    }
+                ]
+            },
+            interactions: {
+                heading: 'It didn\'t have to feel like a static website.',
+                information: [
+                    {
+                        subheading: 'Process of unlocking — failure prevention vs. ease of use.',
+                        description: [
+                            {
+                                text: 'Unlocking the controller to access the “boot menu” had inherently clunky origins by design. My initial approach was focused on failure prevention, through walking users through each micro-action one after another.\n',
+                                highlight: false,
+                                break: true
+                            },
+                            {
+                                text: 'Though it appeared intuitive in theory, it was actually',
+                                highlight: false,
+                                break: false
+                            },
+                            {
+                                text: 'unnecessarily cumbersome in physical practice',
+                                highlight: true,
+                                break: false
+                            },
+                            {
+                                text: 'with actual hardware (',
+                                highlight: false,
+                                break: false
+                            },
+                            {
+                                text: 'Figure 5.0',
+                                highlight: true,
+                                break: false
+                            },
+                            {
+                                text: ').',
+                                highlight: false,
+                                break: true
+                            },
+                            {
+                                text: 'I made the pivot to an approach more conscious of hardware interactions and ease of use (',
+                                highlight: false,
+                                break: false
+                            },
+                            {
+                                text: 'Figure 5.1',
+                                highlight: true,
+                                break: false
+                            },
+                            {
+                                text: ').',
+                                highlight: false,
+                                break: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.LOOPVIDEO,
+                                number: '5.0'
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.LOOPVIDEO,
+                                number: '5.1'
+                            }
+                        ],
+                        points: [
+                            {
+                                text: 'Ensured that users carefully read, follow, and verify completion of the instructions',
+                                icon: '/icons/green-thumbs-up.svg',
+                                highlightedText: ''
+                            },
+                            {
+                                text: 'One thing at a time — low cognitive load',
+                                icon: '/icons/green-thumbs-up.svg',
+                                highlightedText: ''
+                            },
+                        ],
+                        additionalPoints: [
+                            {
+                                text: 'A single page, no extra actions',
+                                icon: '/icons/green-thumbs-up.svg',
+                                highlightedText: ''
+                            },
+                            {
+                                text: 'Decent cognitive load — so long as instructions were formatted and structured well',
+                                icon: '/icons/green-thumbs-up.svg',
+                                highlightedText: ''
+                            },
+                        ],
+                        additionalPoints1: [
+                            {
+                                text: 'A much longer process — perhaps unnecessary',
+                                icon: '/icons/red-thumbs-down.svg',
+                                highlightedText: ''
+                            },
+                            {
+                                text: 'Having to go back and forth between controller and mouse/touchpad',
+                                icon: '/icons/red-thumbs-down.svg',
+                                highlightedText: ''
+                            },
+                        ],
+                        additionalPoints2: [
+                            {
+                                text: 'Fully reliant on user-descretion to follow instructions carefully',
+                                icon: '/icons/red-thumbs-down.svg',
+                                highlightedText: ''
+                            }
+                        ],
+                    },
+                    {
+                        subheading: 'Understanding the need for tactility.',
+                        description: [
+                            {
+                                text: 'I opted for an illustration-led card layout to make the experience feel more tactile and interactive rather than exhaustively reading text from a list. (',
+                                highlight: false,
+                                break: false
+                            },
+                            {
+                                text: 'Figure 5.2',
+                                highlight: true,
+                                break: false
+                            },
+                            {
+                                text: ').',
+                                highlight: false,
+                                break: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '5.2'
+                            }
+                        ],
+                    },
+                    {
+                        subheading: 'Wait, was something actually downloaded?',
+                        description: [
+                            {
+                                text: 'In the back-end, downloading the update took a fraction of a second, which in theory was a good thing. However, seeing it on the screen (',
+                                highlight: false,
+                                break: false
+                            },
+                            {
+                                text: 'Figure 5.3',
+                                highlight: true,
+                                break: false
+                            },
+                            {
+                                text: ') gave the impression of ',
+                                highlight: false,
+                                break: false
+                            },
+                            {
+                                text: 'abruptness, and ultimately distrust',
+                                highlight: true,
+                                break: false
+                            },
+                            {
+                                text: 'on whether the download was successful.',
+                                highlight: false,
+                                break: true
+                            },
+                            {
+                                text: 'I worked with our engineering team to implement a ',
+                                highlight: false,
+                                break: false
+                            },
+                            {
+                                text: 'deliberate loading delay ',
+                                highlight: true,
+                                break: false
+                            },
+                            {
+                                text: ')',
+                                highlight: false,
+                                break: false
+                            },
+                            {
+                                text: 'Figure 5.4',
+                                highlight: true,
+                                break: false
+                            },
+                            {
+                                text: ') to convey a more explicit change affordance.',
+                                highlight: false,
+                                break: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                interactText: 'process flow',
+                                type: HighlightType.LOOPVIDEO,
+                                number: '5.3'
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                interactText: 'process flow',
+                                type: HighlightType.LOOPVIDEO,
+                                number: '5.4'
+                            }
+                        ],
+                        points: [
+                            {
+                                text: 'No time wasted, true to what\'s happening',
+                                icon: '/icons/green-thumbs-up.svg',
+                                highlightedText: ''
+                            },
+                            {
+                                text: 'Potential of user doubt and distrust',
+                                icon: '/icons/red-thumbs-down.svg',
+                                highlightedText: ''
+                            }
+                        ],
+                        additionalPoints: [
+                            {
+                                text: 'Feedback to manage expectation and build anticipation — it just feels like it worked',
+                                icon: '/icons/green-thumbs-up.svg',
+                                highlightedText: ''
+                            },
+                            {
+                                text: 'A bit of extra time to wait',
+                                icon: '/icons/red-thumbs-down.svg',
+                                highlightedText: ''
+                            }
+                        ],
                     }
                 ]
             }

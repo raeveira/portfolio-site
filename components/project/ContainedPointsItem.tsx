@@ -7,6 +7,9 @@ export default function ContainedPointsItem({position, imageSrc, children}: { po
 
     useEffect(() => {
         switch (position) {
+            case 'single':
+                setStyling("pb-[24px] pt-[26px] items-stretch rounded-[24px] 1920px:pt-[30px] 1920px:pb-[28px] max-767px:pt-[24px] max-767px:pb-[22px]");
+                break;
             case 'top':
                 setStyling("pb-[24px] pt-[26px] items-stretch rounded-[24px_24px_6px_6px] 1920px:pt-[30px] 1920px:pb-[28px] max-767px:pt-[24px] max-767px:pb-[22px]");
                 break;

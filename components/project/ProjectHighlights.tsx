@@ -1,17 +1,20 @@
 import React, {useEffect, useState} from "react";
-import Items from "@/data/projectItems";
 import ItemIdentifier from "@/types/ItemIdentifier";
 import Image from "next/image";
 import DynamicImages from "@/components/project/DynamicImages";
+import fetchData from "@/app/actions/fetchData";
 
 export default function ProjectHighlights({ItemIdentifier}: { ItemIdentifier: number }) {
     const [projectItems, setProjectItems] = useState<ItemIdentifier>();
 
     useEffect(() => {
-        const items = Items.find((item) => item.id === ItemIdentifier);
-        if (items) {
-            setProjectItems(items);
+        const fetchProjectItems = async () => {
+            const data = await fetchData({id: ItemIdentifier});
+            if (data) {
+                setProjectItems(data);
+            }
         }
+        fetchProjectItems().then();
     }, [ItemIdentifier]);
 
     return (

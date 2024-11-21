@@ -53,6 +53,21 @@ const Items: ItemIdentifier[] = [
                 id: 'interactions',
                 text: 'Interactions',
                 offsetTop: 0
+            },
+            {
+                id: 'visualDesign',
+                text: 'Visual Design',
+                offsetTop: 0
+            },
+            {
+                id: 'finalDesigns',
+                text: 'Final Designs',
+                offsetTop: 0
+            },
+            {
+                id: 'hidden',
+                text: 'hidden',
+                offsetTop: 0
             }
         ],
         content: {
@@ -865,6 +880,493 @@ const Items: ItemIdentifier[] = [
                                 highlightedText: ''
                             }
                         ],
+                    }
+                ]
+            },
+            visualDesign: {
+                heading: 'Unmistakeably Stadia, undeniably Google.',
+                information: [
+                    {
+                        subheading: 'Combining the old and new.',
+                        description: [
+                            {
+                                text: 'At Google’s scale of design, it would be redundant to create an entirely new design system for this project.',
+                                break: true,
+                                highlight: false
+                            },
+                            {
+                                text: 'Instead, custom components were designed on a per-need basis, and',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'maximized the use of atomic Material Design elements and characteristics.',
+                                break: true,
+                                highlight: true
+                            },
+                            {
+                                text: 'Though, there was room for some fun! In the spirit of being',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'forward-looking while also paying homage to the past',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ', I fused together aspects of Material Design with Stadia’s design system (',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 6.0',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ').',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '6.0'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: 'Cards — versatile and responsive.',
+                        description: [
+                            {
+                                text: 'The card component was highly-critical from a content-organization perspective. It was designed to',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'prioritize readability while accounting for responsiveness, flexibility, and i18n.\n',
+                                break: true,
+                                highlight: true
+                            },
+                            {
+                                text: 'I put a lot of emphasis on documenting design spec to foster smooth design-engineering collaboration.',
+                                break: true,
+                                highlight: false
+                            },
+                            {
+                                text: 'It was also an opportunity to leverage Figma’s new component properties functionalities to greatly speed up collaboration with UXW (',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 6.1 & 6.2',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ').',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                interactText: 'specs',
+                                alt: 'Ansible project image',
+                                interactiveAlt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                interactiveSrc: '/images/ansible-thumbnail-interactive.png',
+                                type: HighlightType.INTERACTIVE,
+                                number: '6.1'
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '6.2'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: 'Dialogs — valuably interruptive.',
+                        description: [
+                            {
+                                text: "In the rare instance that something goes wrong, it was of utmost priority to",
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: "communicate it clearly and suggest direct solutions.",
+                                break: true,
+                                highlight: true
+                            },
+                            {
+                                text: "In the rare instance that something goes wrong, it was of utmost priority to communicate it clearly and suggest direct solutions.\n" +
+                                    "\n" +
+                                    "Center-aligned iconography and headings were used in tandem with subtle motion design to be more interruptive and draw greater attention (",
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: "Figure 6.3",
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ").",
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.LOOPVIDEO,
+                                number: '6.3'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: 'Stepper — a visual method for passive orientation.',
+                        description: [
+                            {
+                                text: 'Though small, it functioned to accurately represent the update flow and offer users with',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'visual indication for progress',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: 'and passive wayfinding.',
+                                break: true,
+                                highlight: false
+                            },
+                            {
+                                text: 'As a component that neither existed within Material Design or Stadia’s design system, every atomic element and their combined states were intricately defined.',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.LOOPVIDEO,
+                                number: '6.4'
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '6.4'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: 'Illustrations — recognizing but not overemphasizing the industrial design.',
+                        description: [
+                            {
+                                text: 'The design direction of the illustrations focused on prioritizing',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'scannability and interpretation of relative button positioning.',
+                                break: true,
+                                highlight: true
+                            },
+                            {
+                                text: 'This made the linework approach more favourable as',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'actions could easily take priority',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: 'over the controller itself (',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 6.5',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ').',
+                                break: true,
+                                highlight: false
+                            },
+                            {
+                                text: 'It also aligned greater with artifacts within Stadia\'s existing visual design ecosystem, such as those found on the controller\'s user manual (',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 6.6',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ').',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                interactText: 'indicators',
+                                alt: 'Ansible project image',
+                                interactiveAlt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                interactiveSrc: '/images/ansible-thumbnail-interactive.png',
+                                type: HighlightType.INTERACTIVE,
+                                number: '6.5'
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '6.6'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: '',
+                        description: [
+                            {
+                                text: 'Manually redrawing vector assets enabled greater control over colour, button sizing, and overall visual manipulation (',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 6.7 and 6.8',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ').',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                interactText: 'annotations',
+                                alt: 'Ansible project image',
+                                interactiveAlt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                interactiveSrc: '/images/ansible-thumbnail-interactive.png',
+                                type: HighlightType.INTERACTIVE,
+                                number: '6.7'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: '',
+                        description: [
+                            {
+                                text: 'The website\'s backdrop was a nod to Stadia\'s last UI update — featuring the Stadia emblem as a clipping mask against a blurred ellipse (',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 6.9',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ').',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '6.9'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: '',
+                        description: [
+                            {
+                                text: 'I collaborated closely with UXE to design and implement a concentric ring motion concept, representative of Bluetooth connectivity (',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 6.10',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ').',
+                                break: true,
+                                highlight: false
+                            },
+                            {
+                                text: 'By only adjusting fundamental size and colour properties, the animation was lightweight and',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'implementable purely with CSS transform.',
+                                break: true,
+                                highlight: true
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.LOOPVIDEO,
+                                number: '6.10'
+                            }
+                        ]
+                    }
+                ]
+            },
+            finalDesign: {
+                heading: 'An effortless experience',
+                information: [
+                    {
+                        subheading: 'You kinda just click through it.',
+                        description: [
+                            {
+                                text: 'For the most part, the firmware update process from start to end should take a user no longer than a minute — two tops (',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 7.0',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ').',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.LOOPVIDEO,
+                                number: '7.0'
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '7.1'
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '7.2'
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '7.3'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: 'Finishing touches from internal feedback.',
+                        description: [
+                            {
+                                text: 'There were no major usability issues that came from our round of internal testing. In fact, ',
+                                break: false,
+                                highlight: false
+                            },
+                            {
+                                text: 'over 98% of our internal testers had successfully updated their controllers and found the update process to be easy.',
+                                break: true,
+                                highlight: true
+                            },
+                            {
+                                text: 'This meant that I could direct my focus on addressing feedback for a couple of edge cases.\n',
+                                break: true,
+                                highlight: false
+                            },
+                            {
+                                text: 'Figure 7.4',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: 'addresses actions being hidden below the fold on small viewports with high zoom. The solution was to append a sticky actions container to the bottom of the viewport if it reaches a target minimum height.',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '7.4'
+                            }
+                        ]
+                    },
+                    {
+                        subheading: '',
+                        description: [
+                            {
+                                text: 'Figure 7.5',
+                                break: false,
+                                highlight: true
+                            },
+                            {
+                                text: ' addresses feedback about the post-update experience being confusing — mainly regarding controller pairing. A "Get Started" dialog with pairing instructions was added.',
+                                break: true,
+                                highlight: false
+                            }
+                        ],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                                number: '7.5'
+                            }
+                        ]
                     }
                 ]
             }

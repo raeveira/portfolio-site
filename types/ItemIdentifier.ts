@@ -70,7 +70,15 @@ type Content = {
     interactions: {
         heading: string;
         information: InformationItem[];
-    }
+    };
+    visualDesign: {
+        heading: string;
+        information: InformationItem[];
+    };
+    finalDesign: {
+        heading: string;
+        information: InformationItem[];
+    };
 };
 
 type ItemIdentifier = {

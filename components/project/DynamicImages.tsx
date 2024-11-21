@@ -102,7 +102,7 @@ export default function DynamicImages({
                         <div className={'flex items-center justify-end space-x-2 px-4 max-479px:px-3'}>
                             <div
                                 className={'flex text-xs NeueMontreal tracking-widest text-[#f2f2f240] space-x-1 1920px:text-base 1440px:text-sm'}>
-                                <span className={'font-medium text-[#f2f2f266]'}>
+                                <span className={'font-medium text-[#f2f2f266] mr-2'}>
                                     {image.number ? image.number : `${number}.${index}`}
                                 </span>
                                 {image.caption}

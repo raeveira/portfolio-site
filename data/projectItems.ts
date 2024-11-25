@@ -65,6 +65,11 @@ const Items: ItemIdentifier[] = [
                 offsetTop: 0
             },
             {
+                id: 'retrospective',
+                text: 'Retrospective',
+                offsetTop: 0
+            },
+            {
                 id: 'hidden',
                 text: 'hidden',
                 offsetTop: 0
@@ -396,7 +401,12 @@ const Items: ItemIdentifier[] = [
                                 break: false
                             }
                         ],
-                        discovery: 'By matching the server name with its "configuration state" and validating that pairing with the Ansible task stages, we established a fail-safe.',
+                        discovery: {
+                            description: '\'By matching the server name with its "configuration state" and validating that pairing with the Ansible task stages, we established a fail-safe.\',',
+                            heading: 'Fail-safe measures',
+                            color: '#FFD700',
+                            icon: '/icons/white-morethought.svg'
+                        },
                         image: [
                             {
                                 caption: 'Ansible project image',
@@ -1365,6 +1375,67 @@ const Items: ItemIdentifier[] = [
                                 src: '/images/ansible-thumbnail.png',
                                 type: HighlightType.IMAGE,
                                 number: '7.5'
+                            }
+                        ]
+                    }
+                ]
+            },
+            retrospective: {
+                heading: 'A bittersweet ending.',
+                information: [
+                    {
+                        discovery: {
+                            heading: 'A HUGE SUCCESS',
+                            color: '#00A86B',
+                            description: 'Over a million Stadia Controllers were updated to support Bluetooth mode, and that made a lot of people happy!',
+                            icon: '/icons/green-rewind-badge.svg'
+                        },
+                        subheading: '',
+                        description: [],
+                        image: [
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                            },
+                            {
+                                caption: 'Ansible project image',
+                                alt: 'Ansible project image',
+                                src: '/images/ansible-thumbnail.png',
+                                type: HighlightType.IMAGE,
+                            }
+                        ]
+                    },
+                    {
+                        subheading: 'Project Takeaways:',
+                        description: [],
+                        cards: [
+                            {
+                                icon: '/icons/green-thumbs-up.svg',
+                                heading: 'Finding opportunities within constraints',
+                                description: 'Viewing constraints from different perspectives helped brew new approaches to tackle other constraints.',
+                            },
+                            {
+                                icon: '/icons/green-thumbs-up.svg',
+                                heading: 'Leveraging existing resources',
+                                description: 'Google\'s design resources were near unlimited — knowing where to find them and when to use them saved immense time and overhead.',
+                            },
+                            {
+                                icon: '/icons/green-thumbs-up.svg',
+                                heading: 'Collaboration is key',
+                                description: 'Working closely with other teams ensured that the project was not only successful but also a learning experience for everyone involved.',
+                            },
+                            {
+                                icon: '/icons/green-thumbs-up.svg',
+                                heading: 'Iterate, iterate, iterate',
+                                description: 'The project was a testament to the power of iteration — each iteration brought us closer to the final design.',
                             }
                         ]
                     }

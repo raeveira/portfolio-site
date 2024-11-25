@@ -19,15 +19,27 @@ export type PointsItem = {
     icon: string;
 };
 
+export type CardItem = {
+    heading: string;
+    description: string;
+    icon: string;
+};
+
 type InformationItem = {
     subheading: string;
     description: DescriptionItem[];
     image?: HighlightImages[];
+    cards?: CardItem[];
     points?: PointsItem[];
     additionalPoints?: PointsItem[];
     additionalPoints1?: PointsItem[];
     additionalPoints2?: PointsItem[];
-    discovery?: string;
+    discovery?: {
+        heading: string;
+        color: string;
+        description: string;
+        icon: string;
+    };
 };
 
 type Content = {
@@ -76,6 +88,10 @@ type Content = {
         information: InformationItem[];
     };
     finalDesign: {
+        heading: string;
+        information: InformationItem[];
+    };
+    retrospective: {
         heading: string;
         information: InformationItem[];
     };

@@ -12,6 +12,7 @@ import ProjectLayoutPatterns from "@/components/project/ProjectLayoutPatterns";
 import ProjectInteractions from "@/components/project/ProjectInteractions";
 import ProjectVisualDesign from "@/components/project/ProjectVisualDesign";
 import ProjectFinalDesign from "@/components/project/ProjectFinalDesign";
+import ProjectRetrospective from "@/components/project/ProjectRetrospective";
 
 export default function AnsibleProjectPage() {
     const ItemIdentifier = 1;
@@ -37,6 +38,8 @@ export default function AnsibleProjectPage() {
                 <ProjectVisualDesign ItemIdentifier={ItemIdentifier}/>
                 <ProjectDivider/>
                 <ProjectFinalDesign ItemIdentifier={ItemIdentifier}/>
+                <ProjectDivider/>
+                <ProjectRetrospective ItemIdentifier={ItemIdentifier}/>
                 <ProjectDivider/>
             </main>
         </>

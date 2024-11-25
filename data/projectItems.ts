@@ -1398,18 +1398,21 @@ const Items: ItemIdentifier[] = [
                                 alt: 'Ansible project image',
                                 src: '/images/ansible-thumbnail.png',
                                 type: HighlightType.IMAGE,
+                                number: '8.0'
                             },
                             {
                                 caption: 'Ansible project image',
                                 alt: 'Ansible project image',
                                 src: '/images/ansible-thumbnail.png',
                                 type: HighlightType.IMAGE,
+                                number: '8.1'
                             },
                             {
                                 caption: 'Ansible project image',
                                 alt: 'Ansible project image',
                                 src: '/images/ansible-thumbnail.png',
                                 type: HighlightType.IMAGE,
+                                number: '8.2'
                             }
                         ]
                     },

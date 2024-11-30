@@ -52,7 +52,7 @@ export default function ProjectContext({ItemIdentifier}: { ItemIdentifier: numbe
                             </div>
                         </div>
                     </div>
-                    <DynamicImages images={projectItems?.content.context.images} number={'1'} points={undefined} additionalPoints={undefined} />
+                    <DynamicImages images={projectItems?.content.context.images} number={'1'} points={undefined} additionalPoints={undefined} additionalPoints1={undefined} additionalPoints2={undefined} />
                 </div>
             </div>
         </section>

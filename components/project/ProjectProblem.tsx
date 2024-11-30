@@ -127,7 +127,7 @@ export default function ProjectProblem({ItemIdentifier}: { ItemIdentifier: numbe
                         </div>
                     </div>
                 </div>
-                <DynamicImages images={projectItems?.content.problem.images} number={'2'} points={undefined} additionalPoints={undefined} />
+                <DynamicImages images={projectItems?.content.problem.images} number={'2'} points={undefined} additionalPoints={undefined} additionalPoints1={undefined} additionalPoints2={undefined} />
             </div>
         </section>
     )

@@ -70,7 +70,7 @@ const Items: ItemIdentifier[] = [
                 offsetTop: 0
             },
             {
-                id: 'hidden',
+                id: 'hiddenFooter',
                 text: 'hidden',
                 offsetTop: 0
             }

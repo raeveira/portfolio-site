@@ -46,7 +46,7 @@ export default function ProjectStructure({ItemIdentifier}: { ItemIdentifier: num
 
     return (
         <div
-            className={'pointer-events-none hidden 1280px:z-[8] 1280px:justify-center 1280px:flex 1280px:fixed 1280px:inset-[0%] '}>
+            className={'pointer-events-none hidden 1280px:z-[8] 1280px:justify-center 1280px:flex 1280px:fixed 1280px:inset-[0%]'}>
             <div
                 className={'1920px:pt-[144px] 1920px:pl-[72px] 1440px:pt-[120px] 1440px:pl-[56px] 1280px:flex-1 1280px:self-start 1280px:p-0 1280px:pt-[104px] 1280px:pl-[48px]'}/>
             <div
@@ -61,7 +61,7 @@ export default function ProjectStructure({ItemIdentifier}: { ItemIdentifier: num
                     <div
                         className={'flex items-start flex-col gap-y-[16px] 1280px:relative 1280px:items-start 1280px:self-start 1280px:gap-y-[12px] 1920px:gap-y-[16px]'}>
                         {sidebarItems.map((item) => (
-                            item.id !== "hidden" && (
+                            item.text !== "hidden" && (
                                 <Link href={`#${item.id}`} key={item.id}
                                       className={`hover:opacity-60 bg-[#0000] inline-block max-w-full no-underline leading-[16px] text-[12px] NeueMontreal -tracking-[.25px] text-onBackground 1280px:transition-all 1280px:duration-200 1280px:ease-linear 1280px:leading-[17px] 1280px:font-light 1280px:text-[11px] 1280px:py-[4px] 1280px:self-stretch 1280px:tracking-[.4px] 1280px:opacity-25 1920px:leading-[18px] 1920px:text-[12px] ${activeId === item.id ? "activeLinkClass" : ""}`}>
                                     <div>{item.text}</div>

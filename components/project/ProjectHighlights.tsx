@@ -41,7 +41,7 @@ export default function ProjectHighlights({ItemIdentifier}: { ItemIdentifier: nu
                 {/* Project Highlights image */}
                 <div
                     className={'flex self-stretch flex-col gap-y-[32px] 1920px:gap-y-[56px] max-767px:gap-y-[24px]'}>
-                    <DynamicImages images={projectItems?.content.highlightReel.moneyshots} number={'0'} points={undefined} additionalPoints={undefined} />
+                    <DynamicImages images={projectItems?.content.highlightReel.moneyshots} number={'0'} points={undefined} additionalPoints={undefined} additionalPoints2={undefined} additionalPoints1={undefined} />
                 </div>
                 <div
                     className={'-mb-[1px] h-[1px] inset-0/0/auto absolute bg-gradient-to-r from-15% from-[#0000] via-50% via-[#64d2ff80] to-95% to-[#0000]'}/>

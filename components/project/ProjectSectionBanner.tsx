@@ -1,22 +1,25 @@
 import {motion} from 'framer-motion';
 import Image from 'next/image';
 import React, {useEffect, useState} from 'react';
-import Items from "@/data/projectItems";
 import ItemIdentifier from "@/types/ItemIdentifier";
+import fetchData from "@/app/actions/fetchData";
 
 export default function ProjectSectionBanner({ItemIdentifier}: { ItemIdentifier: number }) {
 
     const [projectItems, setProjectItems] = useState<ItemIdentifier>();
 
     useEffect(() => {
-        const items = Items.find((item) => item.id === ItemIdentifier);
-        if (items) {
-            setProjectItems(items);
+        const fetchProjectItems = async () => {
+            const data = await fetchData({id: ItemIdentifier});
+            if (data) {
+                setProjectItems(data);
+            }
         }
+        fetchProjectItems().then();
     }, [ItemIdentifier]);
 
     return (
-        <section id={"hidden"} className={'overflow-hidden relative flex pt-[104px] items-center flex-col z-[1] bg-hero-radial-far 1920px:pt-[144px] 1440px:pt-[120px] max-991px:px-[48px] max-767px:px-[24px] max-479px:pt-[112px] max-479px:px-[16px]'}>
+        <section id="hidden" className={'overflow-hidden relative flex pt-[104px] items-center flex-col z-[1] bg-hero-radial-far 1920px:pt-[144px] 1440px:pt-[120px] max-991px:px-[48px] max-767px:px-[24px] max-479px:pt-[112px] max-479px:px-[16px]'}>
             <div className={'relative flex w-[882px] items-stretch flex-col gap-y-[32px] z-[3] 1920px:w-[1440px] 1440px:w-[1044px] max-991px:w-auto'}>
                 <div className={'flex items-center flex-col gap-y-[64px] 1920px:gap-y-[72px] max-479px:gap-y-[40px]'}>
                     <div className={'flex items-center justify-between flex-col gap-y-[16px] 1920px:gap-y-[24px] 1440px:gap-y-[32px] max-479px:gap-y-[16px] max-479px:px-[24px]'}>

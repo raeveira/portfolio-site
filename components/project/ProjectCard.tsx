@@ -8,7 +8,7 @@ import ProjectCardSkeleton from "@/components/skeletons/ProjectCardSkeleton";
 export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: number }) {
     const [isHovered, setIsHovered] = useState(false);
     const [projectItems, setProjectItems] = useState<ItemIdentifier | null>(null);
-    const [isLoading, setIsLoading] = useState(true);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
         let isMounted = true;

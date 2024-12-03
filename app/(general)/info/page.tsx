@@ -1,6 +1,10 @@
 'use client'
 import { motion } from 'framer-motion';
 import MarkDot from "@/components/MarkDot";
+import Image from "next/image";
+import ContainerHeroImage from "@/components/ContainerHeroImage";
+import InfoPageText from "@/components/InfoPageText";
+import ProjectDivider from "@/components/project/ProjectDivider";
 
 const InfoPage = () => {
     return (
@@ -29,11 +33,45 @@ const InfoPage = () => {
                         </div>
                     </motion.div>
                     {/* info hero stack mobile */}
-                    <div>
-
+                    <div className={'max-767px:flex max-767px:flex-col max-767px:gap-y-[64px]'}>
+                        <motion.div className={'relative w-auto z-[3]'}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    transition={{ duration: 1, delay: 1.5 }}
+                        >
+                            <div className={'-mb-[1px] h-[1px] inset-0/0/auto absolute z-[1] bg-[linear-gradient(to_right,#0000_5%,#fffc_35%,#fff_50%,#fffc_65%,#0000_95%)]'} />
+                            <div className={'shadow-[inset_0_0_8px_#0006,0_0_60px_#0003,0_30px_80px_#00000080] overflow-hidden p-[8px] outline-1 outline-[#f2f2f226] outline rounded-[24px] bg-hero-radial-far -outline-offset-1 backdrop-filter-none max-767px:backdrop-blur-[50px] max-767px:shadow-[inset_0_0_8px_#0006,0_0_60px_#0003,0_20px_80px_#000c]'}>
+                                <div className={'-mb-[2px] h-[2px] bg-gradient-to-r from-[#0000] from-10% via-[#fff] via-50% to-[#0000] to-90%'}/>
+                                <div className={'shadow-[inset_0_0_10px_#0000001a,0_0_12px_#0006] overflow-hidden rounded-[16px] border-solid border border-[#f2f2f24d] backdrop-blur-[20px]'}>
+                                    <div className={'relative  pt-[80px] px-[56px] pb-[192px] items-stretch justify-around auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] flex-col bg-[#101010b3] gap-y-[0px] gap-x-[32px] z-[5] max-991px:gap-y-[32px] max-991px:pt-[8vw] max-991px:px-[5vw] max-991px:pb-[26vw] max-767px:pb-[28vw] p-0'}>
+                                        <Image src={'/logos/logo.png'} alt={'selfie'} width={442} height={663} className={'max-w-full inline-block align-middle'} />
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                        <InfoPageText text={'This is my story — alongside some flicks from my recent trip to Japan.'} text1={undefined} text2={undefined} />
+                        <ContainerHeroImage imageSrc={'/logos/logo.png'} />
+                        <InfoPageText text={'My background in Architecture.'} text1={'In June of 2022, I graduated from architecture school at the University of Toronto. There, I became obsessed with architectural visualization.'} text2={'I was deeply fascinated in the concepts of modularity and adaptability — how our built environment could organically evolve in conjuction with our lifestyles and larger societal forces.'} />
+                        <ContainerHeroImage imageSrc={'/logos/logo.png'} />
+                        <InfoPageText text={'But, I wanted more.'} text1={'Though I loved the freedom of the academic design environment, I was dissatisfied with how slow the industry actually moved.'} text2={'I wanted to push my design craft at a faster pace and have a positive impact on vastly more people.'} />
+                        <ContainerHeroImage imageSrc={'/logos/logo.png'} />
+                        <InfoPageText text={'This thing called UX?'} text1={'When the pandemic struck, I took it as an opportunity to explore new things. I came across UX design competitions, and thought it might be fun to just give it a go (several times).'} text2={'Long story short, my failures eventually turned into successes, and the rest was history.'} />
+                        <ContainerHeroImage imageSrc={'/logos/logo.png'} />
+                        <InfoPageText text={'Making it all happen.'} text1={'To my advantage, I was able leverage a lot of the skills and design principles I had picked up during architecture school to greatly expedite my journey of self-learning UX Design.'} text2={'I loved solving problems by making stuff, and really valued visual storytelling and paying meticulous attention to precision and craftsmanship.'} />
+                        <ContainerHeroImage imageSrc={'/logos/logo.png'} />
+                        <div className={'gap-y-[8px] flex-col flex'}>
+                            <InfoPageText text={'In my spare time,'} text1={'I\'m probably making tweaks to my portfolio or hanging out on Discord.'} text2={'Other than that, you\'ll find me playing basketball and volleyball, hitting the gym, gaming, and trying to get my hands on the latest tech.'}>
+                                <span className={'font-medium text-[18px] text-[#f2f2f2e6]'}>Thanks for stopping by!</span><br/>
+                            </InfoPageText>
+                            <div className={'px-[24px]'}>
+                                <Image src={'/logos/logo.png'} alt={'signature'} width={80} height={80} />
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div className={'inset-[0%] absolute block bg-[0_0] bg-200px bg-[url("/noise/noise-overlay-2.png")] mix-blend-overlay opacity-20 z-[0]'}/>
             </section>
+            <ProjectDivider />
         </main>
     )
 }

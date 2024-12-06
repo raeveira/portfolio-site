@@ -38,7 +38,7 @@ const InfoPage = () => {
                             className={'leading-[110%] font-medium text-[48px] NeueMontreal [text-shadow:0_4px_10px_#0057ff33,0_-4px_10px_#ff5a0026,0_0_30px_#fff3] -tracking-[1px] text-left 1920px:leading-[80px] 1920px:text-[80px] 1920px:[text-shadow:0_8px_20px_#0057ff33,0_-6px_20px_#ff5a001a,0_0_30px_#fff3] 1920px:-tracking-[1.5px]'}>
                             I&apos;m passionate about creating beautiful products that
                             <span
-                                className={'italic Gloock bg-clip-text [text-shadow:0_4px_6px_#0057ff26,0_-4px_6px_#ff5a001a,0_0_20px_#ffffff40] -tracking-[1px] bg-gradient-to-b from-onBackground from-50% to-[#f2f2f233]'}>empower people.</span>
+                                className={'italic Gloock bg-clip-text [text-shadow:0_4px_6px_#0057ff26,0_-4px_6px_#ff5a001a,0_0_20px_#ffffff40] -tracking-[1px] bg-gradient-to-b from-onBackground from-50% to-[#f2f2f233]'}> empower people.</span>
                         </div>
                     </motion.div>
                     {/* info hero stack desktop */}

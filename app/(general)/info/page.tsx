@@ -6,6 +6,8 @@ import ContainerHeroImage from "@/components/ContainerHeroImage";
 import InfoPageText from "@/components/InfoPageText";
 import ProjectDivider from "@/components/project/ProjectDivider";
 import DoubleColHero from "@/components/DoubleColHero";
+import DoubleColExp from "@/components/DoubleColExp";
+import FriendBlock from "@/components/FriendBlock";
 
 const InfoPage = () => {
     return (
@@ -142,9 +144,34 @@ const InfoPage = () => {
                     </div>
                 </div>
                 <div
-                    className={'inset-[0%] absolute block bg-[0_0] bg-200px bg-[url("/noise/noise-overlay-2.png")] mix-blend-overlay opacity-20 z-[0]'}/>
+                    className={'inset-[0%] absolute block bg-[0_0] bg-200px bg-[url("/noise/noise-overlay-2.png")] mix-blend-overlay opacity-20 z-[0] max-479px:opacity-60 max-479px:z-0'}/>
             </section>
             <ProjectDivider/>
+            <section className={'flex pt-[72px] pb-[120px] items-center justify-start flex-col bg-none 1920px:py-[160px] max-991px:bg-none max-991px:py-[48px] max-991px:px-[48px] max-767px:items-stretch max-767px:py-[64px] max-767px:px-[24px] max-479px:px-[16px] max-479px:pt-[56px] max-479px:bg-none'}>
+                <div className={'relative flex w-[882px] flex-col gap-y-[56px] z-[1] 1920px:gap-y-[64px] 1920px:w-[1440px] 1440px:w-[1044px] max-991px:w-auto max-991px:self-stretch max-767px:gap-y-[32px]'}>
+                    <div className={'flex items-center self-start gap-x-[12px] 1920px:gap-x-[16px]'}>
+                        <MarkDot/>
+                        <div className={'leading-[19px] font-medium text-[11px] NeueMontreal mt-[1px] tracking-[1.5px] text-left text-[#f2f2f266] 1920px:leading-[18px] 1920px:text-[14px] 1920px:tracking-[2px]'}>EXPERIENCE</div>
+                    </div>
+                    <div className={'flex items-start flex-col gap-y-[64px] 1920px:gap-y-[80px] 1440px:gap-y-[72px]'}>
+                        <DoubleColExp title={'Discord'} subheader={'Senior Product Designer, Core'} date={'07/\'23 - Present'} content={'I\'m designing the future of Discord\'s messaging & core product experiences, amongst other top secret projects.'} />
+                    </div>
+                </div>
+            </section>
+            <ProjectDivider/>
+            <section className={'flex py-[120px] items-center justify-start flex-col bg-none 1920px:pb-[168px] 1920px:pt-[122px] max-991px:px-[40px] max-991px:bg-none max-767px:px-[24px] max-767px:py-[64px] max-767px:items-stretch max-767px:pb-[88px] max-479px:px-[16px] max-479px:pt-[56px] max-479px:bg-none'}>
+                <div className={'relative flex w-[882px] flex-col gap-y-[80px] z-[1] 1920px:w-[1440px] 1920px:gap-y-[64px] 1440px:w-[1044px] max-991px:w-auto max-991px:self-stretch max-767px:gap-y-[32px] max-479px:gap-y-[32px]'}>
+                    <div className={'flex items-center self-start gap-x-[12px] 1920px:gap-x-[16px]'}>
+                        <MarkDot/>
+                        <div
+                            className={'leading-[19px] font-medium text-[11px] NeueMontreal mt-[1px] tracking-[1.5px] text-left text-[#f2f2f266] 1920px:leading-[18px] 1920px:text-[14px] 1920px:tracking-[2px]'}>FRIENDS
+                        </div>
+                    </div>
+                    <div className={'grid auto-cols-[1fr] grid-cols-[1fr_1fr_1fr] grid-rows-[auto_auto] gap-y-[72px] gap-x-[32px] 1920px:gap-y-[88px] 1920px:gap-x-[64px] 1440px:gap-y-[80px] max-767px:grid-cols-[1fr_1fr] max-479px:grid-cols-[1fr] max-479px:gap-y-[48px]'}>
+                        <FriendBlock name={'Allyson Arrogante'} role={'Designer - Disney'} linkUrl={'allydsgn.com'} linkName={'allydsgn.com'}/>
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }

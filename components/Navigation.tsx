@@ -37,6 +37,7 @@ export default function NavigationBar() {
 		<>
 			<Head>
 				<link rel="prefetch" href="/info"/>
+				<link rel="prefetch" href="/"/>
 			</Head>
 			<header className="fixed w-full z-20">
 			<nav className='bg-gradient-to-b from-[#0006] to-[#0000] h-[168px] pt-6 px-4 md:px-12 2xl:pt-8 flex'>

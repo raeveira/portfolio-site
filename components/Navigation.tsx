@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { usePathname, useRouter } from 'next/navigation';
+import Link from "next/link";
+import Head from 'next/head';
 
 export default function NavigationBar() {
 	const pathname = usePathname();
@@ -32,7 +34,11 @@ export default function NavigationBar() {
     };
 
 	return (
-		<header className="fixed w-full z-20">
+		<>
+			<Head>
+				<link rel="prefetch" href="/info"/>
+			</Head>
+			<header className="fixed w-full z-20">
 			<nav className='bg-gradient-to-b from-[#0006] to-[#0000] h-[168px] pt-6 px-4 md:px-12 2xl:pt-8 flex'>
 				<div className='flex justify-between max-md:justify-start items-center h-14 w-full'>
 					<div className='flex items-center space-x-3 flex-1'>
@@ -93,7 +99,7 @@ export default function NavigationBar() {
 					<div className='flex items-center space-x-4 md:flex-1 justify-end'>
 						{!isMobile && (
 							<>
-								<a
+								<Link
 									href={link.linkedin}
 									target='_blank'
 									rel='noopener noreferrer'
@@ -106,8 +112,8 @@ export default function NavigationBar() {
 										width={18}
 										height={18}
 									/>
-								</a>
-								<a
+								</Link>
+								<Link
 									href={link.resume}
 									target='_blank'
 									rel='noopener noreferrer'
@@ -120,7 +126,7 @@ export default function NavigationBar() {
 										width={18}
 										height={18}
 									/>
-								</a>
+								</Link>
 							</>
 						)}
 						{isMobile && (
@@ -149,7 +155,7 @@ export default function NavigationBar() {
 											transition={{ duration: 0.2 }}
 											className="absolute right-0 mt-2 w-48 bg-[#1c1c1c] backdrop-blur-[20px] bg-[#f2f2f20d] border border-[#f2f2f21a] rounded-[16px] shadow-lg p-3 space-y-1"
 										>
-											<a
+											<Link
 												href={link.linkedin}
 												target='_blank'
 												rel='noopener noreferrer'
@@ -162,8 +168,8 @@ export default function NavigationBar() {
 													width={16}
 													height={16}
 												/>
-											</a>
-											<a
+											</Link>
+											<Link
 												href={link.resume}
 												target='_blank'
 												rel='noopener noreferrer'
@@ -176,7 +182,7 @@ export default function NavigationBar() {
 													width={16}
 													height={16}
 												/>
-											</a>
+											</Link>
 										</motion.div>
 									)}
 								</AnimatePresence>
@@ -186,5 +192,6 @@ export default function NavigationBar() {
 				</div>
 			</nav>
 		</header>
+		</>
 	);
 }

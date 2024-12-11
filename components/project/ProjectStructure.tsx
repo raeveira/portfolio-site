@@ -19,7 +19,6 @@ export default function ProjectStructure({ItemIdentifier}: { ItemIdentifier: num
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                console.log(`Entry: ${entry.target.id}, isIntersecting: ${entry.isIntersecting}`);
                 if (entry.isIntersecting) {
                     setActiveId(entry.target.id);
                 }

@@ -30,13 +30,13 @@ export default function AnsibleProjectPage() {
                 setLoading(true)
                 try {
                     const id = await fetchDataByName({ name: slug });
-                    console.log("id", id)
                     if (id) {
                         setProjectId(id);
-                        setLoading(false)
                     }
                 } catch (error) {
                     console.error('Error fetching project ID:', error);
+                } finally {
+                    setLoading(false);
                 }
                 prevSlugRef.current = slug;
             }

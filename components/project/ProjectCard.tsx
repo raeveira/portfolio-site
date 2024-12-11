@@ -15,18 +15,15 @@ export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: number }
 
         const fetchProjectItems = async () => {
             setIsLoading(true);
-            console.log("fetching project items");
             try {
                 const data = await fetchData({id: ItemIdentifier});
                 if (isMounted && data) {
-                    console.log("fetched data", data);
                     setProjectItems(data);
                 }
             } catch (error) {
                 console.error("Error fetching project items:", error);
             } finally {
                 if (isMounted) {
-                    console.log("finished fetching project items");
                     setIsLoading(false);
                 }
             }

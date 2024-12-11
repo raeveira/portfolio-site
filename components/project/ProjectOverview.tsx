@@ -47,12 +47,12 @@ export default function ProjectOverview({ItemIdentifier}: { ItemIdentifier: numb
                         <div
                             className={'leading-[180%] font-light text-[16px] NeueMontreal flex-1 tracking-[.4px] text-[#f2f2f299] 1920px:text-[18px] 1920px:pr-[40px] 1440px:pr-[24px] max-991px:w-auto max-767px:text-[15px] max-479px:text-[15px]'}>
                             {projectItems?.content.overview.team.map((teamMember, index) => (
-                                <>
+                                <React.Fragment key={index}>
                                     <span key={index}>
                                         {teamMember}
                                     </span>
                                 {index < projectItems.content.overview.team.length - 1 && <br/>}
-                                </>
+                                </React.Fragment>
                             ))}
                         </div>
                     </div>
@@ -84,12 +84,12 @@ export default function ProjectOverview({ItemIdentifier}: { ItemIdentifier: numb
                         <div
                             className={'leading-[180%] font-light text-[16px] NeueMontreal flex-1 tracking-[.4px] text-[#f2f2f299] 1920px:text-[18px] 1920px:pr-[40px] 1440px:pr-[24px] max-991px:w-auto max-767px:text-[15px] max-479px:text-[15px]'}>
                             {projectItems?.content.overview.overview.map((text, index) => (
-                                <>
+                                <React.Fragment key={index}>
                                     <span key={index}>
                                         {text}
                                     </span>
                                     {index < projectItems.content.overview.overview.length - 1 && <><br/><br/></>}
-                                </>
+                                </React.Fragment>
                             ))}
                         </div>
                     </div>

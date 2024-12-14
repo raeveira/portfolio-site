@@ -3,23 +3,28 @@ import ItemIdentifier from "@/types/ItemIdentifier";
 import MarkDot from "@/components/MarkDot";
 import Description from "@/components/project/Description";
 import DynamicImages from "@/components/project/DynamicImages";
-import fetchData from "@/app/actions/fetchData";
 
-export default function ProjectVisualDesign({ItemIdentifier}: { ItemIdentifier: number }) {
+export default function ProjectVisualDesign({Project}: { Project: ItemIdentifier }) {
     const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchProjectItems = async () => {
-            const data = await fetchData({id: ItemIdentifier});
-            if (data) {
-                setProjectItems(data);
-            }
+            if (Project) setProjectItems(Project);
         }
-        fetchProjectItems().then();
-    }, [ItemIdentifier]);
+        fetchProjectItems().then(() => setLoading(false));
+    }, [Project]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if(!projectItems) {
+        return <div>Error: Unable to load project data</div>;
+    }
 
     return (
-        <section id="visualDesign"
+        <section id={projectItems.SidebarItems[8].id}
                  className={'flex py-[120px] items-center justify-start flex-col bg-none 1920px:py-[160px] max-991px:px-[24px] max-767px:px-[24px] max-479px:py-[64px] max-479px:px-[16px] max-479px:bg-none'}>
             <div
                 className={'flex w-[882px] flex-col gap-y-[96px] 1920px:w-[1440px] 1920px:gap-y-[144px] 1440px:w-[1044px] 1440px:gap-y-[120px] max-991px:w-full max-479px:gap-y-[80px]'}>
@@ -39,17 +44,17 @@ export default function ProjectVisualDesign({ItemIdentifier}: { ItemIdentifier: 
                         </div>
                         <div
                             className={'leading-[125%] font-medium text-[40px] NeueMontreal shadow-none -tracking-[1px] 1920px:leading-[62px] 1920px:text-[56px] max-767px:text-[32px] max-479px:leading-[120%]'}>
-                            {projectItems?.content.visualDesign.heading}
+                            {projectItems.Content.visualDesign.heading}
                         </div>
                     </div>
                     {/* Section content block */}
-                    {projectItems?.content.visualDesign.information.map((value, index) => (
+                    {projectItems.Content.visualDesign.information.map((value, index) => (
                         <React.Fragment key={index}>
                             <div
                                 className={'grid items-baseline self-stretch justify-between auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] gap-y-[16px] gap-x-[48px] 1920px:gap-x-[72px] 1440px:gap-x-[56px] max-991px:gap-x-[32px] max-767px:grid-cols-[1fr] max-767px:grid-rows-[auto_auto] max-767px:gap-y-[40px]'}>
                                 <div
                                     className={'leading-[125%] font-medium text-[24px] NeueMontreal pr-[24px] flex-[0_auto] tracking-[.1px] 1920px:leading-[38px] 1920px:text-[32px]'}>
-                                    {value.subheading}
+                                    {value.subHeading}
                                 </div>
                                 <Description content={value.description}/>
                             </div>

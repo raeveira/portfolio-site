@@ -5,7 +5,7 @@ import ItemIdentifier from "@/types/ItemIdentifier";
 import fetchData from "@/app/actions/fetchData";
 import ProjectCardSkeleton from "@/components/skeletons/ProjectCardSkeleton";
 
-export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: number }) {
+export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: string }) {
     const [isHovered, setIsHovered] = useState(false);
     const [projectItems, setProjectItems] = useState<ItemIdentifier | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -14,7 +14,6 @@ export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: number }
         let isMounted = true;
 
         const fetchProjectItems = async () => {
-            setIsLoading(true);
             try {
                 const data = await fetchData({id: ItemIdentifier});
                 if (isMounted && data) {
@@ -22,14 +21,10 @@ export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: number }
                 }
             } catch (error) {
                 console.error("Error fetching project items:", error);
-            } finally {
-                if (isMounted) {
-                    setIsLoading(false);
-                }
             }
         };
 
-        fetchProjectItems()
+        fetchProjectItems().then(() => setIsLoading(false));
 
         return () => {
             isMounted = false;

@@ -57,7 +57,7 @@ export default function DynamicImages({
                                         <div
                                             className={'flex items-center justify-end p-[10px] pl-[20px] self-end flex-row rounded-[100px] bg-[#f2f2f20d] gap-x-[12px] 1920px:gap-x-[12px] 1920px:p-[16px] 1920px:pl-[28px] max-767px:p-[8px] max-767px:pl-[24px]'}>
                                             <Label htmlFor="interactiveMode"
-                                                   className={'leading-[100%] font-medium text-[16px] NeueMontreal tracking-[.2px] 1920px:text-[18px] max-767px:text-[15px]'}>{!isInteractive ? 'Show' : 'Hide'} {image.interactText}</Label>
+                                                   className={'leading-[100%] font-medium text-[16px] NeueMontreal tracking-[.2px] 1920px:text-[18px] max-767px:text-[15px]'}>{!isInteractive ? 'Show' : 'Hide'} {image.interactiveText}</Label>
                                             <Switch id="interactiveMode"
                                                     onClick={() => setIsInteractive(!isInteractive)}/>
                                         </div>

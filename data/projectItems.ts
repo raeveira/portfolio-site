@@ -3,7 +3,7 @@ import {HighlightType} from "@/types/HighlightImages";
 
 const Items: ItemIdentifier[] = [
     {
-        id: 1,
+        id: '1',
         text: 'Ansible',
         heading: 'Ansible',
         company: 'school',
@@ -13,7 +13,7 @@ const Items: ItemIdentifier[] = [
         link: '/projects/ansible',
         color_from: '#ffffff4d',
         color_to: '#0000',
-        SidebarItem: [
+        SidebarItems: [
             {
                 id: 'hidden',
                 text: 'hidden',
@@ -75,13 +75,11 @@ const Items: ItemIdentifier[] = [
                 offsetTop: 0
             }
         ],
-        content: {
+        Content: {
             overview: {
                 role: 'Software Developer',
                 tasks: 'Playbook Development, VM Provisioning, Configuration Management, Automation Scripting, Role Creation, Task Orchestration',
-                team: [
-                    'Rae Valen, PM',
-                ],
+                team: 'Rae Valen, PM; hey, DevOps; J. Doe, QA',
                 timeline: '1 Month',
                 status: 'Launched in September 2024',
                 overview: [

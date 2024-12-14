@@ -1,20 +1,23 @@
 'use client';
 import React, {useEffect, useState} from 'react';
 import Link from "next/link";
-import Items from "@/data/projectItems";
 import SidebarItem from "@/types/SidebarItem";
+import ItemIdentifier from "@/types/ItemIdentifier";
 
-export default function ProjectStructure({ItemIdentifier}: { ItemIdentifier: number }) {
+export default function ProjectStructure({Project}: { Project: ItemIdentifier }) {
 
     const [sidebarItems, setSidebarItems] = useState<SidebarItem[]>([]);
     const [activeId, setActiveId] = useState<string | null>(null);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
-        const items = Items.find((item) => item.id === ItemIdentifier);
-        if (items) {
-            setSidebarItems(items.SidebarItem);
+        const fetchData = async () => {
+            if(Project) setSidebarItems(Project.SidebarItems);
+            console.log("CLIENT PROJECT", Project);
         }
-    }, [ItemIdentifier]);
+
+        fetchData().then(() => setLoading(false));
+    }, [Project]);
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
@@ -42,6 +45,14 @@ export default function ProjectStructure({ItemIdentifier}: { ItemIdentifier: num
             });
         };
     }, [sidebarItems]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if(!sidebarItems) {
+        return <div>Error: Unable to load project data</div>;
+    }
 
     return (
         <div

@@ -26,7 +26,7 @@ export type CardItem = {
 };
 
 type InformationItem = {
-    subheading: string;
+    subHeading: string;
     description: DescriptionItem[];
     image?: HighlightImages[];
     cards?: CardItem[];
@@ -46,10 +46,10 @@ type Content = {
     overview: {
         role: string;
         tasks: string;
-        team: string[];
+        team: string;
         timeline: string;
         status: string;
-        overview: string[];
+        overview: string;
     };
     highlightReel: {
         calloutText: string;
@@ -75,7 +75,7 @@ type Content = {
         heading: string;
         information: InformationItem[];
     };
-    LayoutPatterns: {
+    layoutPatterns: {
         heading: string;
         information: InformationItem[];
     };
@@ -98,7 +98,7 @@ type Content = {
 };
 
 type ItemIdentifier = {
-    id: number;
+    id: string;
     text: string;
     heading: string;
     company: string;
@@ -108,8 +108,8 @@ type ItemIdentifier = {
     link: string;
     color_from: string;
     color_to: string;
-    SidebarItem: SidebarItem[];
-    content: Content;
+    SidebarItems: SidebarItem[];
+    Content: Content;
 };
 
 export default ItemIdentifier;

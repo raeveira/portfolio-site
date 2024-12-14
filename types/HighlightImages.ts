@@ -6,14 +6,15 @@ export enum HighlightType {
 }
 
 type HighlightImages = {
+    id: string;
     src: string;
-    interactiveSrc?: string;
     alt: string;
-    interactiveAlt?: string;
     caption: string;
-    interactText?: string;
-    type: HighlightType;
+    type: string;
     number?: string;
-}
+    interactiveAlt?: string;
+    interactiveText?: string;
+    interactiveSrc?: string;
+};
 
 export default HighlightImages;

@@ -2,23 +2,28 @@ import React, {useEffect, useState} from "react";
 import ItemIdentifier from "@/types/ItemIdentifier";
 import Image from "next/image";
 import DynamicImages from "@/components/project/DynamicImages";
-import fetchData from "@/app/actions/fetchData";
 
-export default function ProjectHighlights({ItemIdentifier}: { ItemIdentifier: number }) {
+export default function ProjectHighlights({Project}: { Project: ItemIdentifier }) {
     const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const fetchProjectItems = async () => {
-            const data = await fetchData({id: ItemIdentifier});
-            if (data) {
-                setProjectItems(data);
-            }
+            if (Project) setProjectItems(Project);
         }
-        fetchProjectItems().then();
-    }, [ItemIdentifier]);
+        fetchProjectItems().then(() => setLoading(false));
+    }, [Project]);
+
+    if (loading) {
+        return <div>Loading...</div>;
+    }
+
+    if(!projectItems) {
+        return <div>Error: Unable to load project data</div>;
+    }
 
     return (
-        <section id="highlights"
+        <section id={projectItems.SidebarItems[2].id}
                  className={'flex pb-[120px] pt-[40px] items-center flex-col 1920px:pb-[160px] max-991px:px-[48px] max-767px:px-[24px] max-767px:pt-[24px] max-479px:px-[16px] max-479px:pb-[64px]'}>
             <div
                 className={'gap-12 bg-[#f2f2f20a] bg-[radial-gradient(circle.closest-corner.at.50%_0,#64d2ff0d,#0000)] rounded-2xl flex flex-col items-center w-[882px] py-12 px-6 relative shadow-[0_40px_100px_#0006] 1920px:px-[32px] 1920px:pt-[64px] 1920px:pb-[32px] 1920px:w-[1440px] 1920px:rounded-[32px] 1920px:bg-[radial-gradient(circle.farthest-side.at.50%_0,#64d2ff0d,#0000_15%)] 1920px:gap-y-[72px] 1440px:px-[24px] 1440px:w-[1044px] 1440px:bg-[radial-gradient(circle.farthest-side.at.50%_0,#64d2ff0d,#0000_12%)] max-991px:px-[24px] max-991px:w-auto max-991px:gap-y-[40px] max-767px:px-[16px] max-767px:pb-[24px] max-767px:w-auto max-767px:gap-y-[40px] max-479px:px-[12px] max-479px:pt-[32px] max-479px:pb-[16px] max-479px:rounded-[24px] max-479px:gap-y-[40px] max-479px:shadow-[inset_0_0_5px_#00000026]'}>
@@ -35,13 +40,13 @@ export default function ProjectHighlights({ItemIdentifier}: { ItemIdentifier: nu
                     </div>
                     <div
                         className={'leading-[140%] font-medium text-[24px] NeueMontreal tracking-[.2px] text-center 1440px:text-[20px] 1920px:text-[40px] max-767px:leading-[130%] max-479px:text-[18px] max-479px:text-center'}>
-                        {projectItems?.content.highlightReel.calloutText}<br/>
+                        {projectItems.Content.highlightReel.calloutText}<br/>
                     </div>
                 </div>
                 {/* Project Highlights image */}
                 <div
                     className={'flex self-stretch flex-col gap-y-[32px] 1920px:gap-y-[56px] max-767px:gap-y-[24px]'}>
-                    <DynamicImages images={projectItems?.content.highlightReel.moneyshots} number={'0'} points={undefined} additionalPoints={undefined} additionalPoints2={undefined} additionalPoints1={undefined} />
+                    <DynamicImages images={projectItems.Content.highlightReel.moneyshots} number={'0'} points={undefined} additionalPoints={undefined} additionalPoints2={undefined} additionalPoints1={undefined} />
                 </div>
                 <div
                     className={'-mb-[1px] h-[1px] inset-0/0/auto absolute bg-gradient-to-r from-15% from-[#0000] via-50% via-[#64d2ff80] to-95% to-[#0000]'}/>

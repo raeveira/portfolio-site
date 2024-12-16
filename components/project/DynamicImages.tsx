@@ -1,11 +1,12 @@
 import ContainedPointsItem from "@/components/project/ContainedPointsItem";
-import highlightImages, {HighlightType} from "@/types/HighlightImages";
-import {PointsItem} from "@/types/ItemIdentifier";
 import HighlightedBody from "@/components/HighlightedBody";
 import Image from "next/image";
 import React, {useState} from "react";
 import {Label} from "@/components/ui/label";
 import {Switch} from "@/components/ui/switch";
+
+import { HighLightImages, PointsItem } from "@prisma/client";
+import {HighlightType} from "@/types/HighlightImages";
 
 export default function DynamicImages({
                                           images,
@@ -15,12 +16,12 @@ export default function DynamicImages({
                                           additionalPoints1,
                                           additionalPoints2
                                       }: {
-    images: highlightImages[] | undefined,
+    images: HighLightImages[],
     number: string,
-    points: PointsItem[] | undefined,
-    additionalPoints: PointsItem[] | undefined,
-    additionalPoints1: PointsItem[] | undefined,
-    additionalPoints2: PointsItem[] | undefined
+    points?: PointsItem[],
+    additionalPoints?: PointsItem[],
+    additionalPoints1?: PointsItem[],
+    additionalPoints2?: PointsItem[]
 }) {
     const isSingleImage = images && images.length === 1;
     const [isInteractive, setIsInteractive] = useState(false);

@@ -1,10 +1,9 @@
 'use server'
-import { PrismaClient } from '@prisma/client';
-import ItemIdentifier from "@/types/ItemIdentifier";
+import { PrismaClient, Project } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-export const fetchDataById = async ({ id }: { id: string }): Promise<ItemIdentifier | null> => {
+export const fetchDataById = async ({ id }: { id: string }): Promise<Project | null> => {
     return prisma.project.findUnique({
         where: { id },
         include: {
@@ -133,6 +132,6 @@ export const fetchDataById = async ({ id }: { id: string }): Promise<ItemIdentif
     });
 };
 
-export const fetchAllDataIds = async (): Promise<ItemIdentifier[]> => {
+export const fetchAllDataIds = async (): Promise<Project[]> => {
     return prisma.project.findMany();
 }

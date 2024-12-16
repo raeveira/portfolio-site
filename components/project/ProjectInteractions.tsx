@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import ItemIdentifier from "@/types/ItemIdentifier";
 import MarkDot from "@/components/MarkDot";
 import Description from "@/components/project/Description";
 import DynamicImages from "@/components/project/DynamicImages";
+import { ExtendedProject as Project } from "@/types/ProjectType";
 
-export default function ProjectInteractions({Project}: { Project: ItemIdentifier }) {
-    const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+export default function ProjectInteractions({Project}: { Project: Project }) {
+    const [projectItems, setProjectItems] = useState<Project>();
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {

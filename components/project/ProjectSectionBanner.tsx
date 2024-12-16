@@ -1,11 +1,11 @@
 import {motion} from 'framer-motion';
 import Image from 'next/image';
 import React, {useEffect, useState} from 'react';
-import ItemIdentifier from "@/types/ItemIdentifier";
+import {ExtendedProject as Project} from '@/types/ProjectType';
 
-export default function ProjectSectionBanner({Project}: { Project: ItemIdentifier }) {
+export default function ProjectSectionBanner({Project}: { Project: Project }) {
 
-    const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+    const [projectItems, setProjectItems] = useState<Project>();
 
     useEffect(() => {
         const fetchProjectItems = async () => {

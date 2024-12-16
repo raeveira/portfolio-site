@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import ItemIdentifier from "@/types/ItemIdentifier";
 import MarkDot from "@/components/MarkDot";
 import Description from "@/components/project/Description";
 import DynamicImages from "@/components/project/DynamicImages";
+import {ExtendedProject as Project} from '@/types/ProjectType';
 
-export default function ProjectLayoutPatterns({Project}: { Project: ItemIdentifier}) {
-    const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+export default function ProjectLayoutPatterns({Project}: { Project: Project}) {
+    const [projectItems, setProjectItems] = useState<Project>();
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -22,8 +22,6 @@ export default function ProjectLayoutPatterns({Project}: { Project: ItemIdentifi
     if (!projectItems) {
         return <div>Error: Unable to load project data</div>;
     }
-
-    console.log("Project Layout Patterns", projectItems.Content);
 
     return (
         <section id={projectItems.SidebarItems[6].id}
@@ -62,7 +60,7 @@ export default function ProjectLayoutPatterns({Project}: { Project: ItemIdentifi
                                 <Description content={value.description}/>
                             </div>
 
-                            <DynamicImages images={value.image} number={"3"} points={value.points} additionalPoints={value.additionalPoints} additionalPoints1={undefined} additionalPoints2={undefined}></DynamicImages>
+                            <DynamicImages images={value.image} number={"3"} points={value.points} additionalPoints={value.additionalPoints}></DynamicImages>
                         </React.Fragment>
                     ))}
                 </div>

@@ -2,10 +2,10 @@
 import React, {useEffect, useState} from 'react';
 import ProjectCard from '@/components/project/ProjectCard';
 import { fetchData } from '@/app/actions/fetchAllData';
-import ItemIdentifier from "@/types/ItemIdentifier";
+import {Project} from '@prisma/client';
 
 export default function ProjectSection() {
-    const [projects, setProject] = useState<ItemIdentifier[] | null>(null);
+    const [projects, setProject] = useState<Project[] | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {

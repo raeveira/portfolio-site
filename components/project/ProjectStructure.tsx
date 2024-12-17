@@ -16,7 +16,6 @@ export default function ProjectStructure({ Project }: { Project: Project }) {
             if (Project && Project.SidebarItems) {
                 setSidebarItems(Project.SidebarItems);
             }
-            console.log("CLIENT PROJECT", Project);
         }
 
         fetchData().then(() => setLoading(false));
@@ -29,7 +28,6 @@ export default function ProjectStructure({ Project }: { Project: Project }) {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setActiveId(entry.target.id);
-                    console.log("ACTIVE ID", entry.target.id);
                 }
             });
         }, {
@@ -53,7 +51,6 @@ export default function ProjectStructure({ Project }: { Project: Project }) {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
                             setActiveId(entry.target.id);
-                            console.log("ACTIVE ID", entry.target.id);
                         }
                     });
                 }, {
@@ -64,7 +61,7 @@ export default function ProjectStructure({ Project }: { Project: Project }) {
                 sections.forEach(section => observerRef.current!.observe(section));
             } else {
                 console.warn("Not all sections are loaded yet, retrying...");
-                setTimeout(setupObserver, 500); // Retry after 500ms
+                setTimeout(setupObserver, 500);
             }
         };
 

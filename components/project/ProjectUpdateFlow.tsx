@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from "react";
-import ItemIdentifier from "@/types/ItemIdentifier";
 import MarkDot from "@/components/MarkDot";
 import Description from "@/components/project/Description";
 import DynamicImages from "@/components/project/DynamicImages";
 import {Discovery} from "@/components/project/Discovery";
+import {ExtendedProject as Project} from "@/types/ProjectType";
 
-export default function ProjectUpdateFlow({Project}: { Project: ItemIdentifier }) {
-    const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+export default function ProjectUpdateFlow({Project}: { Project: Project }) {
+    const [projectItems, setProjectItems] = useState<Project>();
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -46,11 +46,11 @@ export default function ProjectUpdateFlow({Project}: { Project: ItemIdentifier }
                         </div>
                         <div
                             className={'leading-[125%] font-medium text-[40px] NeueMontreal shadow-none -tracking-[1px] 1920px:leading-[62px] 1920px:text-[56px] max-767px:text-[32px] max-479px:leading-[120%]'}>
-                            {projectItems.Content.updateFlow.heading}
+                            {projectItems.Content.updateFlow?.heading}
                         </div>
                     </div>
                     {/* Section content block */}
-                    {projectItems.Content.updateFlow.information.map((value, index) => (
+                    {projectItems.Content.updateFlow?.information.map((value, index) => (
                         <React.Fragment key={index}>
                             <div
                                 className={'grid items-baseline self-stretch justify-between auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] gap-y-[16px] gap-x-[48px] 1920px:gap-x-[72px] 1440px:gap-x-[56px] max-991px:gap-x-[32px] max-767px:grid-cols-[1fr] max-767px:grid-rows-[auto_auto] max-767px:gap-y-[40px]'}>
@@ -61,7 +61,7 @@ export default function ProjectUpdateFlow({Project}: { Project: ItemIdentifier }
                                 <Description content={value.description}/>
                             </div>
                             {/* discovery block */}
-                            <Discovery discoveryItem={value.discovery}/>
+                            <Discovery discoveryItem={value.discovery || undefined}/>
                             <DynamicImages images={value.image} number={"3"} points={value.points}
                                            additionalPoints={value.additionalPoints} additionalPoints1={undefined}
                                            additionalPoints2={undefined}/>

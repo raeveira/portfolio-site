@@ -6,8 +6,8 @@ const prisma = new PrismaClient();
 async function main() {
     const project = await prisma.project.create({
             data: {
-                text: 'Ansible',
-                heading: 'Ansible',
+                text: 'Ansible2',
+                heading: 'Ansible2',
                 company: 'school',
                 year: '\'24',
                 description: 'The automation and acceleration of Linux system installations',
@@ -109,6 +109,7 @@ async function main() {
                                     'An Ansible Learning Curve',
                                 challenge:
                                     'Automate the setup and configuration of a Linux server using Ansible.',
+                                solutionMethod: 'Ansible Playbooks',
                                 solutionDescription: {
                                     create: [
                                         {

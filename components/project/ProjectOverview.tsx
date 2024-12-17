@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
- import ItemIdentifier from "@/types/ItemIdentifier";
+import {ExtendedProject as Project} from "@/types/ProjectType";
 
-export default function ProjectOverview({Project}: { Project: ItemIdentifier }) {
+export default function ProjectOverview({Project}: { Project: Project }) {
 
-    const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+    const [projectItems, setProjectItems] = useState<Project>();
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -17,7 +17,7 @@ export default function ProjectOverview({Project}: { Project: ItemIdentifier }) 
         return <div>Loading...</div>;
     }
 
-    if(!projectItems) {
+    if(projectItems === undefined || null) {
         return <div>Error: Unable to load project data</div>;
     }
 
@@ -38,9 +38,9 @@ export default function ProjectOverview({Project}: { Project: ItemIdentifier }) 
                         <div
                             className={'leading-[150%] font-light text-[16px] NeueMontreal flex-1 tracking-[.4px] text-[#f2f2f299] 1920px:text-[18px] 1920px:pr-[40px] 1440px:pr-[24px] max-991px:w-auto max-767px:text-[15px] max-479px:text-[15px]'}>
                             <span className={'font-normal projectRoleShadow text-[#f2f2f2e6]'}>
-                                {projectItems.Content.overview.role + " "}
+                                {projectItems.Content.overview?.role + " "}
                             </span>
-                            — {projectItems.Content.overview.tasks}
+                            — {projectItems.Content.overview?.tasks}
                         </div>
                     </div>
                     {/* Project Team */}
@@ -51,12 +51,12 @@ export default function ProjectOverview({Project}: { Project: ItemIdentifier }) 
                         </div>
                         <div
                             className={'leading-[180%] font-light text-[16px] NeueMontreal flex-1 tracking-[.4px] text-[#f2f2f299] 1920px:text-[18px] 1920px:pr-[40px] 1440px:pr-[24px] max-991px:w-auto max-767px:text-[15px] max-479px:text-[15px]'}>
-                            {projectItems.Content.overview.team.split(';').map((teamMember, index) => (
+                            {projectItems.Content.overview?.team.split(';').map((teamMember, index, array) => (
                                 <React.Fragment key={index}>
                                     <span key={index}>
                                         {teamMember}
                                     </span>
-                                {index < projectItems.Content.overview.team.split(';').length - 1 && <br/>}
+                                {index < array.length - 1 && <br/>}
                                 </React.Fragment>
                             ))}
                         </div>
@@ -69,10 +69,10 @@ export default function ProjectOverview({Project}: { Project: ItemIdentifier }) 
                         </div>
                         <div
                             className={'leading-[150%] font-light text-[16px] NeueMontreal flex-1 tracking-[.4px] text-[#f2f2f299] 1920px:text-[18px] 1920px:pr-[40px] 1440px:pr-[24px] max-991px:w-auto max-767px:text-[15px] max-479px:text-[15px]'}>
-                            {projectItems.Content.overview.timeline + ", "}
+                            {projectItems.Content.overview?.timeline + ", "}
                             <span
                                 className={'font-normal projectRoleShadow text-[#f2f2f2e6]'}>
-                                {projectItems.Content.overview.status}
+                                {projectItems.Content.overview?.status}
                             </span>
                         </div>
                     </div>
@@ -88,12 +88,12 @@ export default function ProjectOverview({Project}: { Project: ItemIdentifier }) 
                         </div>
                         <div
                             className={'leading-[180%] font-light text-[16px] NeueMontreal flex-1 tracking-[.4px] text-[#f2f2f299] 1920px:text-[18px] 1920px:pr-[40px] 1440px:pr-[24px] max-991px:w-auto max-767px:text-[15px] max-479px:text-[15px]'}>
-                            {projectItems.Content.overview.overview.split(';').map((text, index) => (
+                            {projectItems.Content.overview?.overview.split(';').map((text, index, array) => (
                                 <React.Fragment key={index}>
                                     <span key={index}>
                                         {text}
                                     </span>
-                                    {index < projectItems.Content.overview.overview.split(';').length - 1 && <><br/><br/></>}
+                                    {index < array.length - 1 && <><br/><br/></>}
                                 </React.Fragment>
                             ))}
                         </div>

@@ -16,7 +16,7 @@ export default function DynamicImages({
                                           additionalPoints1,
                                           additionalPoints2
                                       }: {
-    images: HighLightImages[],
+    images: HighLightImages[] | null,
     number: string,
     points?: PointsItem[],
     additionalPoints?: PointsItem[],
@@ -25,6 +25,10 @@ export default function DynamicImages({
 }) {
     const isSingleImage = images && images.length === 1;
     const [isInteractive, setIsInteractive] = useState(false);
+
+    if(images == null) {
+        return null;
+    }
 
     return (
         <div

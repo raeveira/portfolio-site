@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from "react";
-import ItemIdentifier from "@/types/ItemIdentifier";
 import Image from "next/image";
 import DynamicImages from "@/components/project/DynamicImages";
+import {ExtendedProject as Project} from "@/types/ProjectType";
 
-export default function ProjectHighlights({Project}: { Project: ItemIdentifier }) {
-    const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+export default function ProjectHighlights({Project}: { Project: Project }) {
+    const [projectItems, setProjectItems] = useState<Project>();
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -40,13 +40,13 @@ export default function ProjectHighlights({Project}: { Project: ItemIdentifier }
                     </div>
                     <div
                         className={'leading-[140%] font-medium text-[24px] NeueMontreal tracking-[.2px] text-center 1440px:text-[20px] 1920px:text-[40px] max-767px:leading-[130%] max-479px:text-[18px] max-479px:text-center'}>
-                        {projectItems.Content.highlightReel.calloutText}<br/>
+                        {projectItems.Content.highlightReel?.calloutText}<br/>
                     </div>
                 </div>
                 {/* Project Highlights image */}
                 <div
                     className={'flex self-stretch flex-col gap-y-[32px] 1920px:gap-y-[56px] max-767px:gap-y-[24px]'}>
-                    <DynamicImages images={projectItems.Content.highlightReel.moneyshots} number={'0'} points={undefined} additionalPoints={undefined} additionalPoints2={undefined} additionalPoints1={undefined} />
+                    <DynamicImages images={projectItems.Content.highlightReel?.moneyshots || null} number={'0'} points={undefined} additionalPoints={undefined} additionalPoints2={undefined} additionalPoints1={undefined} />
                 </div>
                 <div
                     className={'-mb-[1px] h-[1px] inset-0/0/auto absolute bg-gradient-to-r from-15% from-[#0000] via-50% via-[#64d2ff80] to-95% to-[#0000]'}/>

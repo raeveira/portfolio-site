@@ -160,6 +160,7 @@ model Problem {
   heading             String
   subHeading          String
   challenge           String
+  solutionMethod      String
   solutionDescription SolutionDescriptionItem[]
   description         DescriptionItems[]
   points              PointsItem[]

@@ -1,13 +1,13 @@
 'use client';
 import Link from "next/link";
 import React, {useEffect, useState} from "react";
-import ItemIdentifier from "@/types/ItemIdentifier";
 import fetchData from "@/app/actions/fetchData";
 import ProjectCardSkeleton from "@/components/skeletons/ProjectCardSkeleton";
+import {ExtendedProject as Project} from "@/types/ProjectType";
 
-export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: string }) {
+export default function ProjectCard({ProjectID}: { ProjectID: string }) {
     const [isHovered, setIsHovered] = useState(false);
-    const [projectItems, setProjectItems] = useState<ItemIdentifier | null>(null);
+    const [projectItems, setProjectItems] = useState<Project | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -15,7 +15,7 @@ export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: string }
 
         const fetchProjectItems = async () => {
             try {
-                const data = await fetchData({id: ItemIdentifier});
+                const data = await fetchData({id: ProjectID});
                 if (isMounted && data) {
                     setProjectItems(data);
                 }
@@ -29,7 +29,7 @@ export default function ProjectCard({ItemIdentifier}: { ItemIdentifier: string }
         return () => {
             isMounted = false;
         };
-    }, [ItemIdentifier]);
+    }, [ProjectID]);
 
     if (isLoading) {
         return <ProjectCardSkeleton/>;

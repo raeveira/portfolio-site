@@ -44,11 +44,11 @@ export default function ProjectInteractions({Project}: { Project: Project }) {
                         </div>
                         <div
                             className={'leading-[125%] font-medium text-[40px] NeueMontreal shadow-none -tracking-[1px] 1920px:leading-[62px] 1920px:text-[56px] max-767px:text-[32px] max-479px:leading-[120%]'}>
-                            {projectItems.Content.interactions.heading}
+                            {projectItems.Content.interactions?.heading}
                         </div>
                     </div>
                     {/* Section content block */}
-                    {projectItems.Content.interactions.information.map((value, index) => (
+                    {projectItems.Content.interactions?.information.map((value, index) => (
                         <React.Fragment key={index}>
                             <div
                                 className={'grid items-baseline self-stretch justify-between auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] gap-y-[16px] gap-x-[48px] 1920px:gap-x-[72px] 1440px:gap-x-[56px] max-991px:gap-x-[32px] max-767px:grid-cols-[1fr] max-767px:grid-rows-[auto_auto] max-767px:gap-y-[40px]'}>

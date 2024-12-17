@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
-import ItemIdentifier from "@/types/ItemIdentifier";
 import MarkDot from "@/components/MarkDot";
 import Description from "@/components/project/Description";
 import DynamicImages from "@/components/project/DynamicImages";
+import {ExtendedProject as Project} from "@/types/ProjectType";
 
-export default function ProjectContext({Project}: { Project: ItemIdentifier }) {
-    const [projectItems, setProjectItems] = useState<ItemIdentifier>();
+export default function ProjectContext({Project}: { Project: Project }) {
+    const [projectItems, setProjectItems] = useState<Project>();
     const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
@@ -43,21 +43,21 @@ export default function ProjectContext({Project}: { Project: ItemIdentifier }) {
                             </div>
                             <div
                                 className={'leading-[125%] font-medium text-[40px] NeueMontreal shadow-none -tracking-[1px] 1920px:leading-[62px] 1920px:text-[56px] max-767px:text-[32px] max-479px:leading-[120%]'}>
-                                {projectItems.Content.context.heading}
+                                {projectItems.Content.context?.heading}
                             </div>
                         </div>
                         <div
                             className={'grid items-baseline self-stretch justify-between auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] gap-y-[16px] gap-x-[48px] 1920px:gap-x-[72px] 1440px:gap-x-[56px] max-991px:gap-x-[32px] max-767px:grid-cols-[1fr] max-767px:grid-rows-[auto_auto] max-767px:gap-y-[24px]'}>
                             <div
                                 className={'leading-[125%] font-medium text-[24px] NeueMontreal pr-[24px] flex-[0_auto] tracking-[.1px] 1920px:text-[32px] 1920px:leading-[38px] max-479px:text-[20px]'}>
-                                {projectItems.Content.context.subheading}
+                                {projectItems.Content.context?.subHeading}
                             </div>
                             <div className={'flex flex-col gap-y-[48px] 1920px:gap-y-[64px] max-767px:pt-0'}>
-                                <Description content={projectItems.Content.context.description}/>
+                                <Description content={projectItems.Content.context?.description}/>
                             </div>
                         </div>
                     </div>
-                    <DynamicImages images={projectItems.Content.context.images} number={'1'} points={undefined}
+                    <DynamicImages images={projectItems.Content.context?.images || null} number={'1'} points={undefined}
                                    additionalPoints={undefined} additionalPoints1={undefined}
                                    additionalPoints2={undefined}/>
                 </div>

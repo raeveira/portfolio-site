@@ -2,9 +2,9 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Link from "next/link";
 import SidebarItem from "@/types/SidebarItem";
-import ItemIdentifier from "@/types/ItemIdentifier";
+import {ExtendedProject as Project} from "@/types/ProjectType";
 
-export default function ProjectStructure({ Project }: { Project: ItemIdentifier }) {
+export default function ProjectStructure({ Project }: { Project: Project }) {
     const [sidebarItems, setSidebarItems] = useState<SidebarItem[]>([]);
     const [activeId, setActiveId] = useState<string | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
@@ -33,31 +33,46 @@ export default function ProjectStructure({ Project }: { Project: ItemIdentifier 
                 }
             });
         }, {
-            rootMargin: '-20% 0px -20% 0px',
-            threshold: 0.5
+            rootMargin: '-10% 0px -10% 0px',
+            threshold: 0.1
         });
 
         return () => observerRef.current?.disconnect();
     }, [sectionsLoaded]);
 
     useEffect(() => {
-        if (!observerRef.current || !sectionsLoaded) return;
+        if (!sectionsLoaded) return;
 
-        const sections = sidebarItems
-            .map(item => document.getElementById(item.id))
-            .filter((section): section is HTMLElement => section !== null);
+        const setupObserver = () => {
+            const sections = sidebarItems
+                .map(item => document.getElementById(item.id))
+                .filter((section): section is HTMLElement => section !== null);
 
-        console.log("Sections to observe:", sections);
+            if (sections.length === sidebarItems.length) {
+                observerRef.current = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            setActiveId(entry.target.id);
+                            console.log("ACTIVE ID", entry.target.id);
+                        }
+                    });
+                }, {
+                    rootMargin: '-10% 0px -10% 0px',
+                    threshold: 0.1
+                });
 
-        if (sections.length === sidebarItems.length) {
-            sections.forEach(section => observerRef.current!.observe(section));
-        } else {
-            console.warn("Not all sections are loaded yet");
-            return;
-        }
+                sections.forEach(section => observerRef.current!.observe(section));
+            } else {
+                console.warn("Not all sections are loaded yet, retrying...");
+                setTimeout(setupObserver, 500); // Retry after 500ms
+            }
+        };
 
-        return () => sections.forEach(section => observerRef.current!.unobserve(section));
-    }, [sidebarItems, sectionsLoaded]);
+        setupObserver();
+
+        return () => observerRef.current?.disconnect();
+    }, [sectionsLoaded, sidebarItems]);
+
 
     useEffect(() => {
         if (!loading && sidebarItems.length > 0) {

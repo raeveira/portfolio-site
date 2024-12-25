@@ -1,484 +1,450 @@
 // eslint-disable-next-line @typescript-eslint/no-require-imports
-const { PrismaClient } = require('@prisma/client');
+const {PrismaClient} = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
 async function main() {
     const project = await prisma.project.create({
-            data: {
-                text: 'Ansible2',
-                heading: 'Ansible2',
-                company: 'school',
-                year: '\'24',
-                description: 'The automation and acceleration of Linux system installations',
-                image: '/images/ansible-thumbnail.png',
-                link: '/projects/ansible',
-                color_from: '#ffffff4d',
-                color_to: '#0000',
-                SidebarItems: {
-                    create: [
-                        {text: 'hidden', offsetTop: 0},
-                        {text: 'Overview', offsetTop: 0},
-                        {text: 'Highlights', offsetTop: 0},
-                        {text: 'Context', offsetTop: 0},
-                        {text: 'Problem', offsetTop: 0},
-                        {text: 'Update Flow', offsetTop: 0},
-                        {text: 'Layout Patterns', offsetTop: 0},
-                        {text: 'Interactions', offsetTop: 0},
-                        {text: 'Visual Design', offsetTop: 0},
-                        {text: 'Final Designs', offsetTop: 0},
-                        {text: 'Retrospective', offsetTop: 0},
-                        {text: 'hidden', offsetTop: 0}
-                    ]
-                },
-                Content: {
-                    create: {
-                        overview: {
-                            create: {
-                                role: 'Software Developer',
-                                tasks: 'Playbook Development, VM Provisioning, Configuration Management, Automation Scripting, Role Creation, Task Orchestration',
-                                team: 'Rae Valen, PM',
-                                timeline: '1 Month',
-                                status: 'Launched in September 2024',
-                                overview:
-                                    'Following recent updates to the Ansible school project, questions remained about what would happen with the project\'s resources — whether they could still be applied effectively or risk becoming obsolete. I took charge of designing and implementing automation playbooks for setting up and managing virtual machines, which helped me understand the deployment process better and play an important role in the project\'s success. Upon submitting the project, I received enthusiastic feedback from my teachers, who expressed pride in my work setting up an Apache server with PHP and a MariaDB database across different Linux distributions using Ansible.'
-                            }
-                        },
-                        highlightReel: {
-                            create: {
-                                calloutText: 'An end-to-end setup experience for configuring Apache with PHP and a MariaDB database across various Linux distributions to ensure seamless functionality for my project.',
-                                moneyshots:
-                                    {
-                                        create: {
-                                            caption: 'Ansible project image',
-                                            alt:
-                                                'Ansible project image',
-                                            src:
-                                                '/images/ansible-thumbnail.png',
-                                            type:
-                                                'IMAGE'
-                                        }
-                                    }
-                            }
+        data: {
+            text: 'Mail App',
+            heading: 'Mail App',
+            company: 'Personal Project',
+            year: '\'24',
+            description: 'A modern, secure, and user-friendly email client',
+            image: '/images/mail-app-thumbnail.png',
+            link: '/projects/mail-app',
+            color_from: '#4a90e2',
+            color_to: '#1e3a8a',
+            SidebarItems: {
+                create: [
+                    {text: 'hidden', offsetTop: 0},
+                    {text: 'Overview', offsetTop: 0},
+                    {text: 'Highlights', offsetTop: 0},
+                    {text: 'Context', offsetTop: 0},
+                    {text: 'Problem', offsetTop: 0},
+                    {text: 'Update Flow', offsetTop: 0},
+                    {text: 'Layout Patterns', offsetTop: 0},
+                    {text: 'Interactions', offsetTop: 0},
+                    {text: 'Visual Design', offsetTop: 0},
+                    {text: 'Final Designs', offsetTop: 0},
+                    {text: 'Retrospective', offsetTop: 0},
+                    {text: 'hidden', offsetTop: 0}
+                ]
+            },
+            Content: {
+                create: {
+                    overview: {
+                        create: {
+                            role: 'Full-Stack Developer',
+                            tasks: 'Frontend Development, Backend Integration, Security Implementation, UI/UX Design',
+                            team: 'Solo Project',
+                            timeline: '3 Months',
+                            status: 'Launched in March 2024',
+                            overview:
+                                'Mail.raeveira.nl is a personal project aimed at creating a modern, secure, and user-friendly email client. This web-based application offers a seamless email experience with a focus on privacy and efficiency. The project showcases my skills in full-stack development, from crafting an intuitive user interface to implementing robust backend systems and security measures.'
                         }
-                        ,
-                        context: {
-                            create: {
-                                heading: 'Wrapping up strong with Ansible for Linux deployment.',
-                                subHeading:
-                                    'The automation and acceleration of Linux system installations',
-                                description:
-                                    {
-                                        create: [
-                                            {
-                                                text: 'The Ansible project was a great opportunity to learn about the automation and acceleration of Linux system installations. It was a great experience to work with the team and learn from each other.',
-                                                highlight: false,
-                                                break: true
-                                            },
-                                            {
-                                                text: 'The project was a great success and I am proud of the work that we have done. I am looking forward to working on more projects like this in the future.',
-                                                highlight: true,
-                                                break: false
-                                            },
-                                            {
-                                                text: 'I am excited to see what the future holds for Ansible and how it can be used to improve the efficiency of Linux system installations.',
-                                                highlight: false,
-                                                break: false
-                                            }
-                                        ]
-                                    }
-                                ,
-                                images: {
+                    },
+                    highlightReel: {
+                        create: {
+                            calloutText: 'A feature-rich email client that prioritizes user privacy and offers a clean, intuitive interface for managing emails efficiently.',
+                            moneyshots:
+                                {
                                     create: {
-                                        caption: 'Ansible project image',
-                                        alt:
-                                            'Ansible project image',
-                                        src:
-                                            '/images/ansible-thumbnail.png',
-                                        type:
-                                            'IMAGE'
+                                        caption: 'Mail App Dashboard',
+                                        alt: 'Screenshot of Mail App Dashboard',
+                                        src: '/images/mail-app-dashboard.png',
+                                        type: 'IMAGE'
                                     }
                                 }
-                            }
                         }
-                        ,
-                        problem: {
-                            create: {
-                                heading: 'This wasn\'t just going to be a typical linux installation.',
-                                subHeading:
-                                    'An Ansible Learning Curve',
-                                challenge:
-                                    'Automate the setup and configuration of a Linux server using Ansible.',
-                                solutionMethod: 'Ansible Playbooks',
-                                solutionDescription: {
+                    },
+                    context: {
+                        create: {
+                            heading: 'Building a Secure and Efficient Email Client',
+                            subHeading:
+                                'A focus on user experience and data protection.',
+                            description:
+                                {
                                     create: [
                                         {
-                                            heading: 'Plan',
-                                            icons: '/icons/green-stars-badge.svg',
-                                            description: 'Outline the server requirements and automation goals',
-                                        },
-                                        {
-                                            heading: 'Code',
-                                            icons: '/icons/green-rewind-badge.svg',
-                                            description: 'Write playbooks and scripts to define server configurations.',
-                                        },
-                                        {
-                                            heading: 'Build',
-                                            icons: '/icons/green-rewind-badge.svg',
-                                            description: 'Deploy the server and apply configurations using Ansible.',
-                                        },
-                                        {
-                                            heading: 'Test',
-                                            icons: '/icons/green-emoji-badge.svg',
-                                            description: 'Verify that the server is configured correctly and meets requirements.',
-                                        },
-                                    ],
-                                },
-                                description: {
-                                    create: [
-                                        {
-                                            text: 'Working with Ansible brought in an unexpected layer of complexity.',
+                                            text: 'The Mail App was developed to address the growing need for secure email communication. It was an exciting opportunity to learn about modern web technologies while focusing on user privacy.',
                                             highlight: false,
-                                            break: true,
+                                            break: true
                                         },
                                         {
-                                            text: 'The main challenge required my primary focus, but I needed to quickly learn and schedule time for Ansible to support my goals.',
+                                            text: 'I am proud of the work done in creating a platform that users can trust for their communication needs.',
                                             highlight: true,
-                                            break: false,
+                                            break: false
                                         },
                                         {
-                                            text: 'Balancing these tasks required careful planning to prevent Ansible from disrupting the core objectives.',
+                                            text: 'Looking forward, I aim to expand its features and improve performance based on user feedback.',
                                             highlight: false,
-                                            break: false,
-                                        },
-                                    ],
+                                            break: false
+                                        }
+                                    ]
                                 },
-                                points: {
-                                    create: [
-                                        {
-                                            highlightedText: "An aggressive two-month deadline, ",
-                                            text: "as we had to complete the setup before the primary project deadline.",
-                                            icon: "/icons/yellow-clock.svg"
-                                        },
-                                        {
-                                            highlightedText: "Balancing Ansible learning ",
-                                            text: "and scheduling without impacting the main challenge required careful planning.",
-                                            icon: "/icons/yellow-key.svg"
-                                        },
-                                        {
-                                            highlightedText: "Ansible's configuration needs added complexity, ",
-                                            text: "creating a side challenge in the project timeline.",
-                                            icon: "/icons/yellow-neutral-emoji.svg"
-                                        },
-                                        {
-                                            highlightedText: "The main focus remained on the primary challenge, ",
-                                            text: "making this a secondary but necessary effort.",
-                                            icon: "/icons/yellow-html-css.svg"
-                                        }
-                                    ]
-                                }
-                                ,
-                                images: {
-                                    create: {
-                                        caption: 'Ansible project image',
-                                        alt:
-                                            'Ansible project image',
-                                        src:
-                                            '/images/ansible-thumbnail.png',
-                                        type:
-                                            'IMAGE'
-                                    }
+                            images: {
+                                create: {
+                                    caption: 'Mail App Context Image',
+                                    alt:
+                                        'Overview of Mail App Context',
+                                    src:
+                                        '/images/mail-app-context.png',
+                                    type:
+                                        'IMAGE'
                                 }
                             }
                         }
-                        ,
-                        updateFlow: {
-                            create: {
-                                heading: 'The backbone of the project.',
-                                information:
-                                    {
-                                        create: [
+                    },
+                    problem: {
+                        create: {
+                            heading: 'Addressing the Challenges of Email Security.',
+                            subHeading:
+                                'Creating a reliable email client amidst security concerns.',
+                            challenge:
+                                'Develop a secure email client that protects user data while providing an intuitive experience.',
+                            solutionMethod:
+                                'Implementing strong encryption and user-friendly design principles.',
+                            solutionDescription:
+                                {
+                                    create:
+                                        [
                                             {
-                                                subHeading: "You gotta start somewhere.",
-                                                description: {
-                                                    create: [
-                                                        {
-                                                            text: 'The DevOps team provided me with a list of mandatory server setup instructions, which included an unconventional CLI interaction to configure Ansible settings',
-                                                            highlight: false,
-                                                            break: false
-                                                        },
-                                                        {text: '(see Figure 3.0).', highlight: true, break: false}
-                                                    ]
-                                                },
-                                                image: {
-                                                    create: {
-                                                        caption: 'Ansible project image',
-                                                        alt: 'Ansible project image',
-                                                        src: '/images/ansible-thumbnail.png',
-                                                        type: 'IMAGE',
-                                                        number: '3.0'
-                                                    }
-                                                }
+                                                heading:
+                                                    'Research',
+                                                icons:
+                                                    '/icons/green-stars-badge.svg',
+                                                description:
+                                                    'Investigate best practices in email security and user experience design.',
                                             },
                                             {
-                                                subHeading: "Finding structure amidst the chaos.",
-                                                description: {
-                                                    create: [
-                                                        {
-                                                            text: 'To navigate a complex set of Ansible setup instructions, I first focused on creating a ',
-                                                            highlight: false,
-                                                            break: false
-                                                        },
-                                                        {text: 'sense of clear progress.', highlight: true, break: true},
-                                                        {text: 'As shown in Figure 3.1', highlight: true, break: false},
-                                                        {
-                                                            text: ', I categorized the instructions into four stages to reduce the cognitive load of processing all steps simultaneously.',
-                                                            highlight: false,
-                                                            break: true
-                                                        },
-                                                        {
-                                                            text: 'Overly technical language was also simplified to make the instructions more accessible for a general audience.',
-                                                            highlight: false,
-                                                            break: false
-                                                        }
-                                                    ]
-                                                },
-                                                image: {
-                                                    create: {
-                                                        caption: 'Ansible project image',
-                                                        alt: 'Ansible project image',
-                                                        src: '/images/ansible-thumbnail.png',
-                                                        type: 'IMAGE',
-                                                        number: '3.1'
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    }
-                            }
-                        }
-                        ,
-                        layoutPatterns: {
-                            create: {
-                                heading: 'Reinforcing Ansible with Verification and Fail-Safe Measures',
-                                information:
-                                    {
-                                        create: [
-                                            {
-                                                subHeading: 'Keepin\' it old school — responsive layout grids.',
-                                                description: {
-                                                    create: [
-                                                        {
-                                                            text: 'A standard set of layout grids and breakpoints (',
-                                                            highlight: false,
-                                                            break: false
-                                                        },
-                                                        {text: 'Figure 4.0', highlight: true, break: false},
-                                                        {
-                                                            text: '), was critical in ensuring we could',
-                                                            highlight: false,
-                                                            break: false
-                                                        },
-                                                        {
-                                                            text: 'design and build quickly and consistently.',
-                                                            highlight: true,
-                                                            break: false
-                                                        }
-                                                    ]
-                                                },
-                                                image: {
-                                                    create: {
-                                                        caption: 'Ansible project image',
-                                                        alt: 'Ansible project image',
-                                                        src: '/images/ansible-thumbnail.png',
-                                                        interactiveText: 'Click here to view the interactive image',
-                                                        interactiveAlt: 'Ansible project image',
-                                                        interactiveSrc: '/images/ansible-thumbnail-interactive.png',
-                                                        type: 'INTERACTIVE',
-                                                        number: '4.0'
-                                                    }
-                                                }
-                                            }
-                                        ]
-                                    }
-                            }
-                        }
-                        ,
-                        interactions: {
-                            create: {
-                                heading: 'It didn\'t have to feel like a static website.',
-                                information: {
-                                    create: [
-                                        {
-                                            subHeading: 'Process of unlocking — failure prevention vs. ease of use.',
-                                            description: {
-                                                create: [
-                                                    {
-                                                        text: 'Unlocking the controller to access the "boot menu" had inherently clunky origins by design. My initial approach was focused on failure prevention, through walking users through each micro-action one after another.\n',
-                                                        highlight: false,
-                                                        break: true
-                                                    },
-                                                    {
-                                                        text: 'Though it appeared intuitive in theory, it was actually',
-                                                        highlight: false,
-                                                        break: false
-                                                    },
-                                                    {
-                                                        text: 'unnecessarily cumbersome in physical practice',
-                                                        highlight: true,
-                                                        break: false
-                                                    },
-                                                    {text: 'with actual hardware (', highlight: false, break: false},
-                                                    {text: 'Figure 5.0', highlight: true, break: false},
-                                                    {text: ').', highlight: false, break: true}
-                                                ]
+                                                heading:
+                                                    'Development',
+                                                icons:
+                                                    '/icons/green-rewind-badge.svg',
+                                                description:
+                                                    'Build the application using modern web technologies with security as a priority.',
                                             },
-                                            image: {
-                                                create: {
-                                                    caption: 'Ansible project image',
-                                                    alt: 'Ansible project image',
-                                                    src: '/images/ansible-thumbnail.png',
-                                                    type: 'LOOPVIDEO',
-                                                    number: '5.0'
-                                                }
+                                            {
+                                                heading:
+                                                    'Testing',
+                                                icons:
+                                                    '/icons/green-emoji-badge.svg',
+                                                description:
+                                                    'Conduct thorough testing to ensure functionality and security before launch.',
+                                            },
+                                        ],
+                                },
+                            description:
+                                {
+                                    create:
+                                        [
+                                            {
+                                                text:
+                                                    'The main challenge was to balance security features with usability. I needed to ensure that users could easily navigate the app while having their data protected.',
+                                                highlight:
+                                                    false,
+                                                break:
+                                                    true,
+                                            },
+                                            {
+                                                text:
+                                                    'This required careful planning and execution to avoid overwhelming users with complex security protocols.',
+                                                highlight:
+                                                    true,
+                                                break:
+                                                    false,
+                                            },
+                                        ],
+                                },
+                            points:
+                                {
+                                    create:
+                                        [
+                                            {
+                                                highlightedText:
+                                                    "A tight three-month deadline, ",
+                                                text:
+                                                    "which required efficient time management and prioritization of tasks.",
+                                                icon:
+                                                    "/icons/yellow-clock.svg"
+                                            },
+                                            {
+                                                highlightedText:
+                                                    "Balancing development speed ",
+                                                text:
+                                                    "with thorough testing to maintain high security standards.",
+                                                icon:
+                                                    "/icons/yellow-key.svg"
+                                            },
+                                            {
+                                                highlightedText:
+                                                    "User feedback was crucial, ",
+                                                text:
+                                                    "guiding iterative improvements throughout the project.",
+                                                icon:
+                                                    "/icons/yellow-neutral-emoji.svg"
+                                            },
+                                            {
+                                                highlightedText:
+                                                    "Maintaining focus on core functionalities ",
+                                                text:
+                                                    "while developing additional features was essential.",
+                                                icon:
+                                                    "/icons/yellow-html-css.svg"
                                             }
-                                        }
-                                    ]
+                                        ]
+                                },
+                            images: {
+                                create: {
+                                    caption: 'Mail App Problem Image',
+                                    alt: 'Overview of Mail App Problem Context',
+                                    src: '/images/mail-app-problem.png',
+                                    type: 'IMAGE'
                                 }
                             }
                         }
-                        ,
-                        visualDesign: {
-                            create: {
-                                heading: 'Unmistakeably Stadia, undeniably Google.',
-                                information:
+                    },
+                    updateFlow: {
+                        create: {
+                            heading: 'The backbone of the project.',
+                            information: {
+                                create: [
                                     {
-                                        create: [
-                                            {
-                                                subHeading: 'Combining the old and new.',
-                                                description: {
-                                                    create: [
-                                                        {
-                                                            text: 'At Google\'s scale of design, it would be redundant to create an entirely new design system for this project.',
-                                                            break: true,
-                                                            highlight: false
-                                                        },
-                                                        {
-                                                            text: 'Instead, custom components were designed on a per-need basis, and',
-                                                            break: false,
-                                                            highlight: false
-                                                        },
-                                                        {
-                                                            text: 'maximized the use of atomic Material Design elements and characteristics.',
-                                                            break: true,
-                                                            highlight: true
-                                                        }
-                                                    ]
+                                        subHeading: "Starting with User Needs.",
+                                        description: {
+                                            create: [
+                                                {
+                                                    text: 'Conducted surveys to understand user expectations for an email client, focusing on features like security and ease of use.',
+                                                    highlight: false,
+                                                    break: false
                                                 },
-                                                image: {
-                                                    create: {
-                                                        caption: 'Ansible project image',
-                                                        alt: 'Ansible project image',
-                                                        src: '/images/ansible-thumbnail.png',
-                                                        type: 'IMAGE',
-                                                        number: '6.0'
-                                                    }
-                                                }
+                                                {text: '(see Figure 1.0).', highlight: true, break: false}
+                                            ]
+                                        },
+                                        image: {
+                                            create: {
+                                                caption: 'User Needs Survey Results',
+                                                alt: 'Survey results for Mail App features.',
+                                                src: '/images/mail-app-survey.png',
+                                                type: 'IMAGE',
+                                                number: '1.0'
                                             }
-                                        ]
+                                        }
+                                    },
+                                    {
+                                        subHeading: "Iterative Development Process.",
+                                        description: {
+                                            create: [
+                                                {
+                                                    text: 'Adopted an agile development methodology, allowing for rapid iterations based on user feedback and testing results.',
+                                                    highlight: false,
+                                                    break: false
+                                                },
+                                                {text: '(see Figure 1.1).', highlight: true, break: false}
+                                            ]
+                                        },
+                                        image: {
+                                            create: {
+                                                caption: 'Agile Development Process Overview',
+                                                alt: 'Overview of agile development process for Mail App.',
+                                                src: '/images/mail-app-agile.png',
+                                                type: 'IMAGE',
+                                                number: '1.1'
+                                            }
+                                        }
                                     }
+                                ]
                             }
                         }
-                        ,
-                        finalDesign: {
-                            create: {
-                                heading: 'An effortless experience',
-                                information:
+                    },
+                    layoutPatterns: {
+                        create: {
+                            heading: 'Responsive Design Principles Applied.',
+                            information: {
+                                create: [
                                     {
-                                        create: [
-                                            {
-                                                subHeading: 'You kinda just click through it.',
-                                                description: {
-                                                    create: [
-                                                        {
-                                                            text: 'For the most part, the firmware update process from start to end should take a user no longer than a minute — two tops (',
-                                                            break: false,
-                                                            highlight: false
-                                                        },
-                                                        {text: 'Figure 7.0', break: false, highlight: true},
-                                                        {text: ').', break: true, highlight: false}
-                                                    ]
+                                        subHeading: 'Ensuring Accessibility Across Devices.',
+                                        description: {
+                                            create: [
+                                                {
+                                                    text: 'Utilized responsive design techniques to ensure optimal usability on both desktop and mobile devices.',
+                                                    highlight: false,
+                                                    break: false
                                                 },
-                                                image: {
-                                                    create: {
-                                                        caption: 'Ansible project image',
-                                                        alt: 'Ansible project image',
-                                                        src: '/images/ansible-thumbnail.png',
-                                                        type: 'LOOPVIDEO',
-                                                        number: '7.0'
-                                                    }
+                                                {text: '(see Figure 2.0)', highlight: true, break: false},
+                                                {
+                                                    text: ', which significantly improved user engagement.',
+                                                    highlight: false,
+                                                    break: true
                                                 }
+                                            ]
+                                        },
+                                        image: {
+                                            create: {
+                                                caption: 'Responsive Design Layouts',
+                                                alt: 'Examples of responsive layouts used in Mail App.',
+                                                src: '/images/mail-app-responsive.png',
+                                                type: 'IMAGE',
+                                                number: '2.0'
                                             }
-                                        ]
+                                        }
                                     }
+                                ]
                             }
                         }
-                        ,
-                        retrospective: {
-                            create: {
-                                heading: 'A bittersweet ending.',
-                                information:
+                    },
+                    interactions: {
+                        create: {
+                            heading: 'Enhancing User Interactions.',
+                            information: {
+                                create: [
                                     {
-                                        create: [
-                                            {
-                                                subHeading: 'Project Takeaways:',
-                                                description: {
-                                                    create: []
+                                        subHeading: 'Intuitive Navigation Features.',
+                                        description: {
+                                            create: [
+                                                {
+                                                    text: 'Implemented features such as drag-and-drop for organizing emails and customizable shortcuts for enhanced usability.',
+                                                    highlight: false,
+                                                    break: true
                                                 },
-                                                cards: {
-                                                    create: [
-                                                        {
-                                                            icon: '/icons/green-thumbs-up.svg',
-                                                            heading: 'Finding opportunities within constraints',
-                                                            description: 'Viewing constraints from different perspectives helped brew new approaches to tackle other constraints.'
-                                                        },
-                                                        {
-                                                            icon: '/icons/green-thumbs-up.svg',
-                                                            heading: 'Leveraging existing resources',
-                                                            description: 'Google\'s design resources were near unlimited — knowing where to find them and when to use them saved immense time and overhead.'
-                                                        },
-                                                        {
-                                                            icon: '/icons/green-thumbs-up.svg',
-                                                            heading: 'Collaboration is key',
-                                                            description: 'Working closely with other teams ensured that the project was not only successful but also a learning experience for everyone involved.'
-                                                        },
-                                                        {
-                                                            icon: '/icons/green-thumbs-up.svg',
-                                                            heading: 'Iterate, iterate, iterate',
-                                                            description: 'The project was a testament to the power of iteration — each iteration brought us closer to the final design.'
-                                                        }
-                                                    ]
-                                                }
+                                                {text: '(see Figure 3.0)', highlight: true, break: false}
+                                            ]
+                                        },
+                                        image: {
+                                            create: {
+                                                caption: 'User Interaction Features Overview',
+                                                alt: 'Overview of interaction features in Mail App.',
+                                                src: '/images/mail-app-interactions.png',
+                                                type: 'IMAGE',
+                                                number: '3.0'
                                             }
-                                        ]
+                                        }
                                     }
+                                ]
+                            }
+                        }
+                    },
+                    visualDesign: {
+                        create: {
+                            heading: 'A Clean Visual Aesthetic.',
+                            information: {
+                                create: [
+                                    {
+                                        subHeading: 'Modern UI Elements Combined with Functionality.',
+                                        description: {
+                                            create: [
+                                                {
+                                                    text: 'Designed with a focus on simplicity and clarity, ensuring that users can navigate easily without distractions.',
+                                                    break: true,
+                                                    highlight: false
+                                                },
+                                                {text: '(see Figure 4.0)', break: true, highlight: true},
+                                                {
+                                                    text: ', showcasing the balance between aesthetics and functionality.',
+                                                    break: false,
+                                                    highlight: false
+                                                }
+                                            ]
+                                        },
+                                        image: {
+                                            create: {
+                                                caption: 'Visual Design Elements in Mail App',
+                                                alt: 'Visual design elements used in Mail App UI.',
+                                                src: '/images/mail-app-visual-design.png',
+                                                type: 'IMAGE',
+                                                number: '4.0'
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    finalDesign: {
+                        create: {
+                            heading: 'Delivering an Effortless User Experience.',
+                            information: {
+                                create: [
+                                    {
+                                        subHeading: 'Streamlined Workflow from Start to Finish.',
+                                        description: {
+                                            create: [
+                                                {
+                                                    text: 'The final design allows users to manage their emails efficiently with minimal clicks required to perform common tasks (see Figure 5.0). ',
+                                                    break: true,
+                                                    highlight: false
+                                                }
+                                            ]
+                                        },
+                                        image: {
+                                            create: {
+                                                caption: 'Final Design Overview',
+                                                alt: 'Final design layout of Mail App.',
+                                                src: '/images/mail-app-final-design.png',
+                                                type: 'LOOPVIDEO',
+                                                number: '5.0'
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    retrospective: {
+                        create: {
+                            heading: 'Reflecting on Key Learnings.',
+                            information: {
+                                create: [
+                                    {
+                                        subHeading: 'Project Takeaways:',
+                                        description: {
+                                            create: []
+                                        },
+                                        cards: {
+                                            create: [
+                                                {
+                                                    icon: '/icons/green-thumbs-up.svg',
+                                                    heading: 'Balancing Security with Usability',
+                                                    description: "Learned how to implement robust security measures without compromising user experience."
+                                                },
+                                                {
+                                                    icon: '/icons/green-thumbs-up.svg',
+                                                    heading: "Iterative Development",
+                                                    description: "Adopted agile methodologies that allowed continuous improvement based on feedback."
+                                                },
+                                                {
+                                                    icon: '/icons/green-thumbs-up.svg',
+                                                    heading: "User-Centric Design",
+                                                    description: "Focused on creating an intuitive interface based on user needs."
+                                                },
+                                                {
+                                                    icon: '/icons/green-thumbs-up.svg',
+                                                    heading: "Performance Optimization",
+                                                    description: "Gained insights into optimizing web applications for speed."
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
                             }
                         }
                     }
                 }
             }
-        })
-    ;
+        }
+    });
 
     console.log('Seeding completed successfully');
-    console.log("Created project: ", project.id);
+    console.log("Created project:", project.id);
+
 }
 
-main()
-    .catch((e) => {
-        console.error(e);
-        process.exit(1);
-    })
-    .finally(async () => {
-        await prisma.$disconnect();
-    });
+    main()
+        .catch((e) => {
+            console.error(e);
+            process.exit(1);
+        })
+        .finally(async () => {
+            await prisma.$disconnect();
+        });

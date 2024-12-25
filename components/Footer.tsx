@@ -38,8 +38,8 @@ export default function Footer() {
                                 <Link href={link.linkedin} target={"_blank"} className='gap-x-1 text-onBackground self-stretch items-center h-10 no-underline flex'>
                                     <div className='tracking-[0.2px] NeueMontreal text-base font-medium'>LinkedIn</div>
                                     <Image
-                                        src='icon-external.svg'
-                                        alt='LinkedIn Icon'
+                                        src='/icons/icon-external.svg'
+                                        alt='Arrow pointing up and right'
                                         width={18}
                                         height={18}
                                     />
@@ -47,8 +47,8 @@ export default function Footer() {
                                 <Link href={link.resume} target={"_blank"} className='gap-x-1 text-onBackground self-stretch items-center h-10 no-underline flex'>
                                     <div className='tracking-[0.2px] NeueMontreal text-base font-medium'>Resume</div>
                                     <Image
-                                        src='icon-external.svg'
-                                        alt='LinkedIn Icon'
+                                        src='/icons/icon-external.svg'
+                                        alt='Arrow pointing up and right'
                                         width={18}
                                         height={18}
                                     />

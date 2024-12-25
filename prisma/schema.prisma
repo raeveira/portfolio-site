@@ -1,0 +1,260 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model SidebarItems {
+  id        String  @id @default(cuid())
+  text      String?
+  offsetTop Int
+
+  Project Project[]
+}
+
+model HighLightImages {
+  id              String  @id @default(cuid())
+  src             String
+  alt             String
+  interactiveAlt  String?
+  caption         String
+  interactiveText String?
+  interactiveSrc  String?
+  type            String // IMAGE, VIDEO, LOOPVIDEO, INTERACTIVE
+  number          String?
+
+  InformationItem InformationItem[]
+
+  highlightReel HighlightReel[]
+
+  Context Context[]
+
+  problem Problem[]
+}
+
+model DescriptionItems {
+  id                String           @id @default(cuid())
+  text              String
+  highlight         Boolean
+  break             Boolean
+  informationItem   InformationItem? @relation(fields: [informationItemId], references: [id])
+  informationItemId String?
+
+  Context Context[]
+
+  problem Problem[]
+}
+
+model SolutionDescriptionItem {
+  id          String @id @default(cuid())
+  icons       String
+  heading     String
+  description String
+
+  problem Problem[]
+}
+
+model PointsItem {
+  id                String            @id @default(cuid())
+  highlightedText   String
+  text              String
+  icon              String
+  points            InformationItem[] @relation("Points")
+  additionalPoints  InformationItem[] @relation("AdditionalPoints")
+  additionalPoints1 InformationItem[] @relation("AdditionalPoints1")
+  additionalPoints2 InformationItem[] @relation("AdditionalPoints2")
+
+  problem Problem[]
+}
+
+model CardItem {
+  id          String @id @default(cuid())
+  heading     String
+  description String
+  icon        String
+
+  InformationItem InformationItem[]
+}
+
+model DiscoveryItem {
+  id          String @id @default(cuid())
+  heading     String
+  color       String
+  description String
+  icon        String
+
+  InformationItem InformationItem[]
+}
+
+model InformationItem {
+  id                String             @id @default(cuid())
+  subHeading        String
+  description       DescriptionItems[]
+  image             HighLightImages[]
+  cards             CardItem[]
+  points            PointsItem?        @relation("Points", fields: [pointsId], references: [id])
+  additionalPoints  PointsItem?        @relation("AdditionalPoints", fields: [additionalPointsId], references: [id])
+  additionalPoints1 PointsItem?        @relation("AdditionalPoints1", fields: [additionalPoints1Id], references: [id])
+  additionalPoints2 PointsItem?        @relation("AdditionalPoints2", fields: [additionalPoints2Id], references: [id])
+  discovery         DiscoveryItem?     @relation(fields: [discoveryItemId], references: [id])
+
+  UpdateFlow UpdateFlow[]
+
+  LayoutPatterns LayoutPatterns[]
+
+  Interactions Interactions[]
+
+  VisualDesign VisualDesign[]
+
+  FinalDesign FinalDesign[]
+
+  Retrospective       Retrospective[]
+  pointsId            String?
+  additionalPointsId  String?
+  additionalPoints1Id String?
+  additionalPoints2Id String?
+  discoveryItemId     String?
+}
+
+model Overview {
+  id       String @id @default(cuid())
+  role     String
+  tasks    String
+  team     String
+  timeline String
+  status   String
+  overview String
+
+  Content Content?
+}
+
+model HighlightReel {
+  id          String            @id @default(cuid())
+  calloutText String
+  moneyshots  HighLightImages[]
+
+  Content Content?
+}
+
+model Context {
+  id          String             @id @default(cuid())
+  heading     String
+  subHeading  String
+  description DescriptionItems[]
+  images      HighLightImages[]
+
+  Content Content?
+}
+
+model Problem {
+  id                  String                    @id @default(cuid())
+  heading             String
+  subHeading          String
+  challenge           String
+  solutionMethod      String
+  solutionDescription SolutionDescriptionItem[]
+  description         DescriptionItems[]
+  points              PointsItem[]
+  images              HighLightImages[]
+
+  Content Content?
+}
+
+model UpdateFlow {
+  id          String            @id @default(cuid())
+  heading     String
+  information InformationItem[]
+
+  Content Content?
+}
+
+model LayoutPatterns {
+  id          String            @id @default(cuid())
+  heading     String
+  information InformationItem[]
+
+  Content Content?
+}
+
+model Interactions {
+  id          String            @id @default(cuid())
+  heading     String
+  information InformationItem[]
+
+  Content Content?
+}
+
+model VisualDesign {
+  id          String            @id @default(cuid())
+  heading     String
+  information InformationItem[]
+
+  Content Content?
+}
+
+model FinalDesign {
+  id          String            @id @default(cuid())
+  heading     String
+  information InformationItem[]
+
+  Content Content?
+}
+
+model Retrospective {
+  id          String            @id @default(cuid())
+  heading     String
+  information InformationItem[]
+
+  Content Content?
+}
+
+model Content {
+  id               String          @id @default(cuid())
+  Overviewid       String?         @unique
+  HighlightReelid  String?         @unique
+  Contextid        String?         @unique
+  Problemid        String?         @unique
+  UpdateFlowid     String?         @unique
+  LayoutPatternsid String?         @unique
+  Interactionsid   String?         @unique
+  VisualDesignid   String?         @unique
+  FinalDesignid    String?         @unique
+  Retrospectiveid  String?         @unique
+  overview         Overview?       @relation(fields: [Overviewid], references: [id])
+  highlightReel    HighlightReel?  @relation(fields: [HighlightReelid], references: [id])
+  context          Context?        @relation(fields: [Contextid], references: [id])
+  problem          Problem?        @relation(fields: [Problemid], references: [id])
+  updateFlow       UpdateFlow?     @relation(fields: [UpdateFlowid], references: [id])
+  layoutPatterns   LayoutPatterns? @relation(fields: [LayoutPatternsid], references: [id])
+  interactions     Interactions?   @relation(fields: [Interactionsid], references: [id])
+  visualDesign     VisualDesign?   @relation(fields: [VisualDesignid], references: [id])
+  finalDesign      FinalDesign?    @relation(fields: [FinalDesignid], references: [id])
+  retrospective    Retrospective?  @relation(fields: [Retrospectiveid], references: [id])
+
+  Project Project?
+}
+
+model Project {
+  id           String         @id @default(cuid())
+  text         String
+  heading      String
+  company      String
+  year         String
+  description  String
+  image        String
+  link         String
+  color_from   String
+  color_to     String
+  SidebarItems SidebarItems[]
+  Content      Content        @relation(fields: [Contentid], references: [id])
+  Contentid    String         @unique
+}

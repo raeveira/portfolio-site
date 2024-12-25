@@ -35,3 +35,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE'S
+.idea/
+.vscode/
+
+#IDE
+.idea
+.vscode
+/prisma/migrations/
+/prisma/database.sqlite

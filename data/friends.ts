@@ -1,39 +1,27 @@
 const friends = [
     {
-        name: 'Allyson Arrogante',
-        role: 'Designer - Disney',
-        linkUrl: 'allydsgn.com',
-        linkName: 'allydsgn.com'
+        name: 'Gé Leurs',
+        role: 'Software Developer - Student',
+        linkUrl: '#',
+        linkName: 'LinkedIn'
     },
     {
-        name: 'Allyson Arrogante',
-        role: 'Designer - Disney',
-        linkUrl: 'allydsgn.com',
-        linkName: 'allydsgn.com'
+        name: 'Daan Klaassen',
+        role: 'Software Developer - Student',
+        linkUrl: '#',
+        linkName: 'LinkedIn'
     },
     {
-        name: 'Allyson Arrogante',
-        role: 'Designer - Disney',
-        linkUrl: 'allydsgn.com',
-        linkName: 'allydsgn.com'
+        name: 'Vincent Steegh',
+        role: 'Software Developer - Student',
+        linkUrl: '#',
+        linkName: 'LinkedIn'
     },
     {
-        name: 'Allyson Arrogante',
-        role: 'Designer - Disney',
-        linkUrl: 'allydsgn.com',
-        linkName: 'allydsgn.com'
-    },
-    {
-        name: 'Allyson Arrogante',
-        role: 'Designer - Disney',
-        linkUrl: 'allydsgn.com',
-        linkName: 'allydsgn.com'
-    },
-    {
-        name: 'Allyson Arrogante',
-        role: 'Designer - Disney',
-        linkUrl: 'allydsgn.com',
-        linkName: 'allydsgn.com'
+        name: 'Jim Vervoort',
+        role: 'ITSD - Student',
+        linkUrl: '#',
+        linkName: 'LinkedIn'
     }
 ]
 

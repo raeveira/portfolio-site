@@ -56,7 +56,7 @@ const InfoPage = () => {
                         </React.Fragment>
                     ))}
                     <div className={'px-[24px] 1920px:px-[48px] 1440px:px-[32px]'}>
-                        <Image src={'/logos/logo.png'} alt={'signature'} width={80} height={80}/>
+                        <Image src={'/signature.png'} alt={'signature'} width={80} height={80}/>
                     </div>
                 </div>
             </section>
@@ -105,7 +105,7 @@ const InfoPage = () => {
                         ))}
                         <div className={'gap-y-[8px] flex-col flex'}>
                             <div className={'px-[24px]'}>
-                                <Image src={'/logos/logo.png'} alt={'signature'} width={80} height={80}/>
+                                <Image src={'/signature.png'} alt={'signature'} width={80} height={80}/>
                             </div>
                         </div>
                     </div>

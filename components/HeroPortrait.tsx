@@ -11,10 +11,9 @@ export default function HeroPortrait() {
                         <div className='max-479px:text-[#f2f2f280] NeueMontreal max-479px:text-[16px] max-479px:font-normal max-479px:block'>Rae - Software Developer</div>
                     </div>  
                     <div className='NeueMontreal font-medium max-479px:text-left max-479px:-tracking-[.25vw] text-hero-479 max-479px:text-[13vw] max-479px:leading-[12vw] max-479px:text-hero-479'>
-                        I craft products, interactions
-                        <span> &</span>
+                        I craft wonders, adventures &amp;
                         <br />
-                        <span className='max-479px:-tracking-[.25vw]'>stories.</span>
+                        <span className='max-479px:-tracking-[.25vw]'>tales.</span>
                     </div>
                 </div>
                 <div className='opacity-100 transform translate-x-0 translate-y-0 translate-z-0 scale-x-100 scale-y-100 scale-z-100 rotate-x-0 rotate-y-0 rotate-z-0 skew-x-0 skew-y-0 transform-style-3d max-479px:z-[1] max-479px:gap-y-[2vh] max-479px:flex-col max-479px:items-start max-479px:flex max-479px:relative'>
@@ -23,7 +22,7 @@ export default function HeroPortrait() {
                             Student at Gilde. Based in Roermond.
                             <br />
                         </span>
-                        Formerly at Google and RBC.
+                        Passionate about language side quests!
                     </div>
                 </div>
             </div>

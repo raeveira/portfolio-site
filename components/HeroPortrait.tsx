@@ -31,7 +31,7 @@ export default function HeroPortrait() {
                 <div className='max-479px:gap-x-[6px] max-479px:items-center max-479px:flex max-479px:relative'>
                     <ScrollArrow />
                     <div className='hidden max-479px:text-[#f2f2f280] NeueMontreal max-479px:text-[16px] max-479px:font-normal max-479px:block'>
-                        Selected Work &apos;23
+                        Selected Work &apos;24
                     </div>
                 </div>
             </div>

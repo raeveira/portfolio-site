@@ -64,7 +64,7 @@ export default function Footer() {
                     </div>
                     <div className='flex-col flex-1 justify-end self-stretch items-end flex max-767px:items-start'>
                         <div className='opacity-50 tracking-[0.2px] NeueMontreal text-xs font-light leading-5'>
-                            Last updated by Rae on October 04, 2024, 21:05 CEST
+                            Last updated by Dylan on January 27, 2025, 20:15 CEST
                         </div>
                     </div>
                 </div>

@@ -127,7 +127,7 @@ const InfoPage = () => {
                     <div className={'flex items-start flex-col gap-y-[64px] 1920px:gap-y-[80px] 1440px:gap-y-[72px]'}>
                         {experiences.map((exp, index) => (
                             <DoubleColExp key={index} title={exp.title} subheader={exp.subheader} date={exp.date}
-                                          content={exp.content}/>
+                                          content={exp.content} link={exp.link}/>
                         ))}
                     </div>
                 </div>

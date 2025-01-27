@@ -23,7 +23,7 @@ const InfoPage = () => {
                 <div
                     className={'inset-auto/0/0 absolute flex pt-[40x] h-[200px] items-center flex-col bg-[linear-gradient(to_bottom,#10101000,var(--background),60%)] z-[5] 1920px:pt-[96px] 1920px:h-[280px] 1920px:items-center 1440px:pt-[64px]'}/>
                 <div
-                    className={'relative flex w-[882px] flex-col gap-y-[80px] z-[1] 1920px:w-[1440px] 1920px:gap-y-[120px] 1440px:gap-y-[88px] 1440px:w-[1044px]'}>
+                    className={'relative flex w-[882px] flex-col gap-y-[40px] z-[1] 1920px:w-[1440px] 1920px:gap-y-[80px] 1440px:gap-y-[48px] 1440px:w-[1044px]'}>
                     <motion.div className={'flex flex-col gap-y-[24px] 1920px:gap-y-[32px]'}
                                 animate={{opacity: 1, y: 0}}
                                 initial={{opacity: 0, y: 20}}

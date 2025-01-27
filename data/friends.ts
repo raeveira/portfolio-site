@@ -19,7 +19,7 @@ const friends = [
     },
     {
         name: 'Jim Vervoort',
-        role: 'ITSD - Student',
+        role: 'Information Technology Services Division - Student',
         linkUrl: '#',
         linkName: 'LinkedIn'
     }

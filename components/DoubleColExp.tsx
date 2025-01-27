@@ -16,6 +16,7 @@ const DoubleColExp = ({title, subheader, date, content, link}: {
                 {link && (
                     <Link
                         href={link}
+                        target="_blank"
                         className="text-[16px] text-[#f2f2f2] hover:text-[#f2f2f2cc] transition-colors duration-300 underline underline-offset-2 decoration-[#f2f2f266] hover:decoration-[#f2f2f2cc]"
                     >
                         {link}

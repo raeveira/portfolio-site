@@ -1,5 +1,6 @@
 import {motion} from "framer-motion";
 import Image from "next/image";
+import React from "react";
 
 const DoubleColHero = ({imageSrc, imageSrc1, text, text1, text2, text3, text4, text5, children}: {
     imageSrc: string,
@@ -32,11 +33,13 @@ const DoubleColHero = ({imageSrc, imageSrc1, text, text1, text2, text3, text4, t
                         <div
                             className={'shadow-[inset_0_0_10px_#0000001a,0_0_12px_#0006] overflow-hidden rounded-[16px] border border-solid border-[#f2f2f24d] backdrop-blur-[20px] 1920px:shadow-[inset_0_0_15px_#0000001a,0_0_20px_#0000004d] 1920px:rounded-[24px]'}>
                             <div
-                                className={'relative flex pt-[80px] px-[56px] pb-[192px] items-stretch justify-around auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] flex-col bg-[#101010b3] gap-y-[0px] gap-x-[32px] z-[5] 1920px:backdrop-filter-none 1920px:flex-col 1920px:pt-[120px] 1920px:px-[88px] 1920px:pb-[280px] 1440px:gap-x-[62px] 1440px:gap-y-[0px] 1440px:pt-[96px] 1440px:px-[72px] 1440px:pb-[200px]'}>
+                                className={'relative flex p-0 items-stretch justify-around auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] flex-col bg-[#101010b3] gap-y-[0px] gap-x-[32px] z-[5] 1920px:backdrop-filter-none 1920px:flex-col 1920px:p-0 1440px:gap-x-[62px] 1440px:gap-y-[0px] 1440px:p-0'}>
                                 <Image src={imageSrc} alt={'selfie'}
                                        sizes={'(max-width: 767px) 100vw, (max-width: 991px) 42vw, (max-width: 1439px) 339px, (max-width: 1919px) 476px, 658px'}
                                        width={442} height={663}
-                                       className={'max-w-full inline-block align-middle'}/>
+                                       className={'max-w-full inline-block align-middle object-cover w-full h-full'}
+                                       loading={'lazy'}
+                                />
                             </div>
                         </div>
                     </div>
@@ -75,11 +78,13 @@ const DoubleColHero = ({imageSrc, imageSrc1, text, text1, text2, text3, text4, t
                         <div
                             className={'shadow-[inset_0_0_10px_#0000001a,0_0_12px_#0006] overflow-hidden rounded-[16px] border border-solid border-[#f2f2f24d] backdrop-blur-[20px] 1920px:shadow-[inset_0_0_15px_#0000001a,0_0_20px_#0000004d] 1920px:rounded-[24px]'}>
                             <div
-                                className={'relative flex pt-[80px] px-[56px] pb-[192px] items-stretch justify-around auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] flex-col bg-[#101010b3] gap-y-[0px] gap-x-[32px] z-[5] 1920px:backdrop-filter-none 1920px:flex-col 1920px:pt-[120px] 1920px:px-[88px] 1920px:pb-[280px] 1440px:gap-x-[62px] 1440px:gap-y-[0px] 1440px:pt-[96px] 1440px:px-[72px] 1440px:pb-[200px]'}>
+                                className={'relative flex p-0 items-stretch justify-around auto-cols-[1fr] grid-cols-[1fr_1fr] grid-rows-[auto] flex-col bg-[#101010b3] gap-y-[0px] gap-x-[32px] z-[5] 1920px:backdrop-filter-none 1920px:flex-col 1920px:p-0 1440px:gap-x-[62px] 1440px:gap-y-[0px] 1440px:p-0'}>
                                 {imageSrc1 && (<Image src={imageSrc1} alt={'selfie'}
                                                       sizes={'(max-width: 767px) 100vw, (max-width: 991px) 42vw, (max-width: 1439px) 339px, (max-width: 1919px) 476px, 658px'}
                                                       width={442} height={663}
-                                                      className={'max-w-full inline-block align-middle'}/>)}
+                                                      className={'max-w-full inline-block align-middle object-cover w-full h-full'}
+                                                      loading={'lazy'}
+                                />)}
 
                             </div>
                         </div>

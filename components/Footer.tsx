@@ -1,8 +1,11 @@
+'use client'
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useNavigation } from '@/context/NavigationContext';
 
 export default function Footer() {
+    const { handleNavigation } = useNavigation();
 
     const link = {
         linkedin: 'https://www.linkedin.com/in/dylanbackes/',
@@ -24,12 +27,12 @@ export default function Footer() {
                         <div className='gap-y-4 flex-col items-start w-[106px] flex max-991px:w-[80px] max-479px:gap-y-3 max-479px:w-24 '>
                             <div className='opacity-50 tracking-[1.5px] text-[9px] font-medium leading-[13px] NeueMontreal'>MAIN</div>
                             <div className='gap-y-2 flex-col self-stretch flex'>
-                                <Link href={'/'} className='gap-x-1 text-onBackground self-stretch items-center h-10 no-underline flex'>
+                                <button onClick={() => handleNavigation('/')} className='gap-x-1 text-onBackground self-stretch items-center h-10 no-underline flex'>
                                     <div className='tracking-[0.2px] NeueMontreal text-base font-medium'>Work</div>
-                                </Link>
-                                <Link href={'/info'} className='gap-x-1 text-onBackground self-stretch items-center h-10 no-underline flex'>
+                                </button>
+                                <button onClick={() => handleNavigation('/info')} className='gap-x-1 text-onBackground self-stretch items-center h-10 no-underline flex'>
                                     <div className='tracking-[0.2px] NeueMontreal text-base font-medium'>Info</div>
-                                </Link>
+                                </button>
                             </div>
                         </div>
                         <div className='gap-y-4 flex-col items-start w-[106px] flex max-991px:w-[80px] max-479px:gap-y-3 max-479px:w-24'>

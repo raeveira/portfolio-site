@@ -3,16 +3,14 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { usePathname, useRouter } from 'next/navigation';
 import Link from "next/link";
 import Head from 'next/head';
+import {useNavigation} from "@/context/NavigationContext";
 
 export default function NavigationBar() {
-	const pathname = usePathname();
-	const router = useRouter();
+    const { currentPath, handleNavigation } = useNavigation();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	const [isMobile, setIsMobile] = useState(false);
-	const [currentPath, setCurrentPath] = useState(pathname);
 
 	useEffect(() => {
 		const checkIfMobile = () => setIsMobile(window.innerWidth < 768);
@@ -20,13 +18,6 @@ export default function NavigationBar() {
 		window.addEventListener('resize', checkIfMobile);
 		return () => window.removeEventListener('resize', checkIfMobile);
 	}, []);
-
-	const handleNavigation = (path: string) => {
-		setCurrentPath(path);
-		setTimeout(() => {
-			router.push(path);
-		}, 300);
-	};
 
     const link = {
         linkedin: 'https://www.linkedin.com/in/dylanbackes/',

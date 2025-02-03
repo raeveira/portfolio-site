@@ -21,7 +21,7 @@ export default function NavigationBar() {
 
     const link = {
         linkedin: 'https://www.linkedin.com/in/dylanbackes/',
-        resume: 'https://drive.google.com/file/d/1pTNYEs-n9ItmKb7zdPGaqmZCyEM2dsf6/view?usp=sharing'
+        resume: 'https://drive.google.com/uc?id=1pTNYEs-n9ItmKb7zdPGaqmZCyEM2dsf6&export=download'
     };
 
 	return (

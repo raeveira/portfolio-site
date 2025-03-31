@@ -9,9 +9,9 @@ async function main() {
             text: 'Mail App',
             heading: 'Mail App',
             company: 'Personal Project',
-            year: '\'24',
+            year: '\'25',
             description: 'A modern, secure, and user-friendly email client',
-            image: '/images/mail-app-thumbnail.png',
+            image: '/images/mail-app/thumbnail.png',
             link: '/projects/mail-app',
             color_from: '#4a90e2',
             color_to: '#1e3a8a',
@@ -37,11 +37,11 @@ async function main() {
                         create: {
                             role: 'Full-Stack Developer',
                             tasks: 'Frontend Development, Backend Integration, Security Implementation, UI/UX Design',
-                            team: 'Solo Project',
-                            timeline: '3 Months',
-                            status: 'Launched in March 2024',
+                            team: 'Raeveira',
+                            timeline: '3 Months', // TODO: add timeline, started at 24-03-2025
+                            status: 'Launched in March 2025', // TODO: Add actual launch date
                             overview:
-                                'Mail.raeveira.nl is a personal project aimed at creating a modern, secure, and user-friendly email client. This web-based application offers a seamless email experience with a focus on privacy and efficiency. The project showcases my skills in full-stack development, from crafting an intuitive user interface to implementing robust backend systems and security measures.'
+                                'mail.raeveira.nl is a personal project aimed at creating a modern, secure, and user-friendly email client. This web-based application offers a seamless email experience with a focus on privacy and efficiency. The project showcases my skills in full-stack development, from crafting an intuitive user interface to implementing robust backend systems and security measures.'
                         }
                     },
                     highlightReel: {
@@ -52,7 +52,7 @@ async function main() {
                                     create: {
                                         caption: 'Mail App Dashboard',
                                         alt: 'Screenshot of Mail App Dashboard',
-                                        src: '/images/mail-app-dashboard.png',
+                                        src: '/images/mail-app/dashboard.png',
                                         type: 'IMAGE'
                                     }
                                 }
@@ -89,7 +89,7 @@ async function main() {
                                     alt:
                                         'Overview of Mail App Context',
                                     src:
-                                        '/images/mail-app-context.png',
+                                        '/images/mail-app/context.png',
                                     type:
                                         'IMAGE'
                                 }
@@ -163,9 +163,9 @@ async function main() {
                                         [
                                             {
                                                 highlightedText:
-                                                    "A tight three-month deadline, ",
+                                                    "A loose deadline, ",
                                                 text:
-                                                    "which required efficient time management and prioritization of tasks.",
+                                                    "having the freedom to experiment with different approaches. And no strict deadline meant I could take my time to make a reliable web mail.",
                                                 icon:
                                                     "/icons/yellow-clock.svg"
                                             },
@@ -199,7 +199,7 @@ async function main() {
                                 create: {
                                     caption: 'Mail App Problem Image',
                                     alt: 'Overview of Mail App Problem Context',
-                                    src: '/images/mail-app-problem.png',
+                                    src: '/images/mail-app/problem.png',
                                     type: 'IMAGE'
                                 }
                             }
@@ -226,7 +226,7 @@ async function main() {
                                             create: {
                                                 caption: 'User Needs Survey Results',
                                                 alt: 'Survey results for Mail App features.',
-                                                src: '/images/mail-app-survey.png',
+                                                src: '/images/mail-app/survey.png',
                                                 type: 'IMAGE',
                                                 number: '1.0'
                                             }
@@ -248,7 +248,7 @@ async function main() {
                                             create: {
                                                 caption: 'Agile Development Process Overview',
                                                 alt: 'Overview of agile development process for Mail App.',
-                                                src: '/images/mail-app-agile.png',
+                                                src: '/images/mail-app/agile.png',
                                                 type: 'IMAGE',
                                                 number: '1.1'
                                             }
@@ -284,7 +284,7 @@ async function main() {
                                             create: {
                                                 caption: 'Responsive Design Layouts',
                                                 alt: 'Examples of responsive layouts used in Mail App.',
-                                                src: '/images/mail-app-responsive.png',
+                                                src: '/images/mail-app/responsive.png',
                                                 type: 'IMAGE',
                                                 number: '2.0'
                                             }
@@ -351,7 +351,7 @@ async function main() {
                                             create: {
                                                 caption: 'Visual Design Elements in Mail App',
                                                 alt: 'Visual design elements used in Mail App UI.',
-                                                src: '/images/mail-app-visual-design.png',
+                                                src: '/images/mail-app/visual-design.png',
                                                 type: 'IMAGE',
                                                 number: '4.0'
                                             }
@@ -381,7 +381,7 @@ async function main() {
                                             create: {
                                                 caption: 'Final Design Overview',
                                                 alt: 'Final design layout of Mail App.',
-                                                src: '/images/mail-app-final-design.png',
+                                                src: '/images/mail-app/final-design.png',
                                                 type: 'LOOPVIDEO',
                                                 number: '5.0'
                                             }

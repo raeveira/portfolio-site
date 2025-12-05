@@ -8,9 +8,6 @@
     "start": "next start -p 80",
     "lint": "next lint"
   },
-  "prisma": {
-    "seed": "ts-node ./prisma/seed.ts"
-  },
   "dependencies": {
     "@next/third-parties": "^15.1.6",
     "@prisma/client": "^6.0.1",

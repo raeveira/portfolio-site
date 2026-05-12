@@ -43,7 +43,7 @@ export default function AnsibleProjectPage() {
                         console.error('Error fetching all project data');
                         return;
                     }
-                    setAllProjectIds(allProjects.map(p => p.id));
+                    setAllProjectIds(allProjects.map((p: Project) => p.id));
                 } catch (error) {
                     console.error('Error fetching project data:', error);
                 } finally {
